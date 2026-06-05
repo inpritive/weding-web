@@ -2,115 +2,270 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Wedding</title>
-  <meta name="description" content="Elegant Pinterest‑inspired wedding ceremony page.">
+  <title>Emma &amp; Liam — 12 September 2026</title>
+  <meta name="description" content="Join Emma & Liam on their wedding day — 12 September 2026. RSVP, venue, schedule and gallery." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Hero Section -->
-  <section class="hero">
-    <img src="hero_placeholder_1780686732627.png" alt="Hero banner" class="hero-img" />
+
+  <!-- ─── NAV ─────────────────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">E & L</a>
+    <ul class="nav-links">
+      <li><a href="#schedule">Schedule</a></li>
+      <li><a href="#venue">Venue</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#rsvp" class="nav-cta">RSVP</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="menu" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ─── HERO ─────────────────────────────────────────────────── -->
+  <section class="hero" id="story">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1800&q=80&fit=crop" alt="Emma and Liam" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
     <div class="hero-content">
-      <h1 class="couple-names">Emma &amp; Liam</h1>
-      <p class="date">12 September 2026</p>
-      <a href="#story" class="cta-btn">Our Story</a>
+      <p class="hero-eyebrow">We're getting married</p>
+      <h1 class="hero-names">Emma <span class="amp">&</span> Liam</h1>
+      <p class="hero-date">
+        <span class="date-day">Saturday</span>
+        12 September 2026
+      </p>
+      <div class="hero-divider">
+        <span class="line"></span>
+        <svg class="leaf" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        <span class="line"></span>
+      </div>
+      <a href="#rsvp" class="hero-btn">
+        Kindly RSVP
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor"/></svg>
+      </a>
+    </div>
+    <a href="#schedule" class="hero-scroll" aria-label="scroll down">
+      <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 16l-6-6 1.41-1.41L12 13.17l4.59-4.58L18 10z" fill="currentColor"/></svg>
+    </a>
+  </section>
+
+  <!-- ─── COUNTDOWN ─────────────────────────────────────────────── -->
+  <section class="countdown-section">
+    <p class="countdown-label">Until we say "I do"</p>
+    <div class="countdown" id="countdown">
+      <div class="count-item"><span id="cd-days">--</span><label>Days</label></div>
+      <div class="count-sep">:</div>
+      <div class="count-item"><span id="cd-hours">--</span><label>Hours</label></div>
+      <div class="count-sep">:</div>
+      <div class="count-item"><span id="cd-mins">--</span><label>Minutes</label></div>
+      <div class="count-sep">:</div>
+      <div class="count-item"><span id="cd-secs">--</span><label>Seconds</label></div>
     </div>
   </section>
 
-  <!-- Details Timeline -->
-  <section class="details" id="details">
-    <h2>Schedule</h2>
-    <ul class="timeline">
-      <li>
-        <span class="icon">💍</span>
-        <div class="info">
+  <!-- ─── SCHEDULE ─────────────────────────────────────────────── -->
+  <section class="schedule" id="schedule">
+    <div class="section-header">
+      <p class="section-eyebrow">Plan your day</p>
+      <h2 class="section-title">The Schedule</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item" data-aos>
+        <div class="timeline-icon">💍</div>
+        <div class="timeline-card">
+          <span class="tl-time">4:00 PM</span>
           <h3>Ceremony</h3>
-          <p>4:00 PM – Garden Pavilion</p>
+          <p>Garden Pavilion — Join us as we exchange vows beneath the canopy of roses.</p>
         </div>
-      </li>
-      <li>
-        <span class="icon">🥂</span>
-        <div class="info">
-          <h3>Cocktails</h3>
-          <p>5:00 PM – Terrace</p>
+      </div>
+      <div class="timeline-item" data-aos>
+        <div class="timeline-icon">🥂</div>
+        <div class="timeline-card">
+          <span class="tl-time">5:15 PM</span>
+          <h3>Cocktail Hour</h3>
+          <p>The Terrace — Signature drinks, canapés and golden-hour photos.</p>
         </div>
-      </li>
-      <li>
-        <span class="icon">🍽️</span>
-        <div class="info">
+      </div>
+      <div class="timeline-item" data-aos>
+        <div class="timeline-icon">🍽️</div>
+        <div class="timeline-card">
+          <span class="tl-time">6:30 PM</span>
           <h3>Dinner</h3>
-          <p>6:30 PM – Ballroom</p>
+          <p>Grand Ballroom — A curated farm-to-table feast with loved ones.</p>
         </div>
-      </li>
-      <li>
-        <span class="icon">💃</span>
-        <div class="info">
+      </div>
+      <div class="timeline-item" data-aos>
+        <div class="timeline-icon">🎶</div>
+        <div class="timeline-card">
+          <span class="tl-time">8:00 PM</span>
           <h3>Dancing</h3>
-          <p>8:00 PM – Dance Floor</p>
-        </div>
-      </li>
-    </ul>
-  </section>
-
-  <!-- Venue Section -->
-  <section class="venue" id="venue">
-    <h2>The Venue</h2>
-    <div class="venue-media">
-      <img src="venue_placeholder.png" alt="Venue" class="venue-img" />
-      <div class="venue-info">
-        <p>Glasshouse Garden, 42 Blossom Lane, Mumbai, India</p>
-        <div class="map-embed">
-          <!-- Simple static map placeholder -->
-          <img src="map_placeholder.png" alt="Map" />
+          <p>Dance Floor — First dance, cake cutting and celebration into the night.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Registry & RSVP -->
-  <section class="rsvp" id="rsvp">
-    <h2>RSVP & Registry</h2>
-    <form id="rsvp-form" class="glass-card">
-      <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" required />
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
-
-      <label for="attending">Will you attend?</label>
-      <select id="attending" name="attending" required>
-        <option value="yes">Yes, can’t wait!</option>
-        <option value="no">Sorry, can’t make it</option>
-      </select>
-
-      <button type="submit" class="submit-btn">Send RSVP</button>
-    </form>
-    <div class="registry-links">
-      <a href="#" class="registry-btn">Our Amazon Registry</a>
-      <a href="#" class="registry-btn">Zola Registry</a>
+  <!-- ─── VENUE ─────────────────────────────────────────────────── -->
+  <section class="venue" id="venue">
+    <div class="venue-inner">
+      <div class="venue-img-wrap" data-aos>
+        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&q=80&fit=crop" alt="Glasshouse Garden Venue" />
+        <div class="venue-badge">The Venue</div>
+      </div>
+      <div class="venue-info" data-aos>
+        <p class="section-eyebrow">Where to find us</p>
+        <h2 class="section-title">Glasshouse Garden</h2>
+        <p class="venue-address">
+          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>
+          42 Blossom Lane, Bandra, Mumbai 400050
+        </p>
+        <div class="venue-map">
+          <iframe
+            title="Venue Map"
+            src="https://maps.google.com/maps?q=42+Blossom+Lane+Bandra+Mumbai&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <a href="https://maps.google.com/?q=42+Blossom+Lane+Bandra+Mumbai" target="_blank" class="venue-directions-btn">
+          Get Directions →
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section class="gallery" id="gallery">
-    <h2>Aesthetic Gallery</h2>
-    <div class="grid">
-      <img src="gallery1.png" alt="Gallery 1" />
-      <img src="gallery2.png" alt="Gallery 2" />
-      <img src="gallery3.png" alt="Gallery 3" />
-      <img src="gallery4.png" alt="Gallery 4" />
-      <img src="gallery5.png" alt="Gallery 5" />
-      <img src="gallery6.png" alt="Gallery 6" />
+  <!-- ─── GALLERY ───────────────────────────────────────────────── -->
+  <section class="gallery-section" id="gallery">
+    <div class="section-header">
+      <p class="section-eyebrow">Our moments</p>
+      <h2 class="section-title">Gallery</h2>
+    </div>
+    <div class="masonry-grid">
+      <div class="masonry-item tall" data-aos>
+        <img src="https://images.unsplash.com/photo-1511285560929-80b456503681?w=900&q=80&fit=crop" alt="Couple portrait" />
+        <div class="masonry-overlay"><span>Our Story</span></div>
+      </div>
+      <div class="masonry-item" data-aos>
+        <img src="https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=900&q=80&fit=crop" alt="Bridal bouquet" />
+        <div class="masonry-overlay"><span>The Florals</span></div>
+      </div>
+      <div class="masonry-item" data-aos>
+        <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=900&q=80&fit=crop" alt="Engagement ring" />
+        <div class="masonry-overlay"><span>The Ring</span></div>
+      </div>
+      <div class="masonry-item tall" data-aos>
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&fit=crop" alt="Table setting" />
+        <div class="masonry-overlay"><span>The Details</span></div>
+      </div>
+      <div class="masonry-item" data-aos>
+        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=900&q=80&fit=crop" alt="The Venue" />
+        <div class="masonry-overlay"><span>The Venue</span></div>
+      </div>
+      <div class="masonry-item" data-aos>
+        <img src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=900&q=80&fit=crop" alt="Mood" />
+        <div class="masonry-overlay"><span>Mood Board</span></div>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <p>© 2026 Emma &amp; Liam. All rights reserved.</p>
+  <!-- ─── RSVP + REGISTRY ──────────────────────────────────────── -->
+  <section class="rsvp-section" id="rsvp">
+    <div class="rsvp-inner">
+      <div class="rsvp-form-wrap" data-aos>
+        <p class="section-eyebrow">Are you coming?</p>
+        <h2 class="section-title">RSVP</h2>
+        <p class="rsvp-note">Please respond by <strong>1 August 2026</strong></p>
+        <form id="rsvp-form" class="rsvp-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name">Full Name</label>
+              <input type="text" id="f-name" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-group">
+              <label for="f-email">Email</label>
+              <input type="email" id="f-email" name="email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-guests">Number of Guests</label>
+            <select id="f-guests" name="guests" required>
+              <option value="">Select guests</option>
+              <option value="1">Just me</option>
+              <option value="2">2 guests</option>
+              <option value="3">3 guests</option>
+              <option value="4">4 guests</option>
+            </select>
+          </div>
+          <div class="form-group attending-group">
+            <label>Will you attend?</label>
+            <div class="radio-group">
+              <label class="radio-pill">
+                <input type="radio" name="attending" value="yes" required />
+                <span>Joyfully accepts 🎉</span>
+              </label>
+              <label class="radio-pill">
+                <input type="radio" name="attending" value="no" />
+                <span>Regretfully declines</span>
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="f-message">Leave a message</label>
+            <textarea id="f-message" name="message" rows="3" placeholder="Warm wishes, song requests..."></textarea>
+          </div>
+          <button type="submit" class="submit-btn" id="rsvp-submit">
+            Send RSVP
+            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/></svg>
+          </button>
+          <p class="form-success" id="form-success" hidden>🌸 Thank you! We can't wait to celebrate with you.</p>
+        </form>
+      </div>
+
+      <div class="registry-wrap" data-aos>
+        <p class="section-eyebrow">Gift Registry</p>
+        <h2 class="section-title">Our Wishlist</h2>
+        <p class="registry-note">Your presence is our greatest gift. If you'd like to honour us further:</p>
+        <div class="registry-cards">
+          <a href="#" class="registry-card">
+            <span class="registry-icon">🛍️</span>
+            <div>
+              <strong>Amazon Registry</strong>
+              <span>View our curated list</span>
+            </div>
+            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="registry-card">
+            <span class="registry-icon">💝</span>
+            <div>
+              <strong>Zola Registry</strong>
+              <span>Experiences & memories</span>
+            </div>
+            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor"/></svg>
+          </a>
+          <a href="#" class="registry-card">
+            <span class="registry-icon">✈️</span>
+            <div>
+              <strong>Honeymoon Fund</strong>
+              <span>Help us make memories</span>
+            </div>
+            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <p class="footer-names">Emma &amp; Liam</p>
+    <p class="footer-date">12 · 09 · 2026</p>
+    <p class="footer-note">Made with love ♡</p>
   </footer>
 
   <script src="script.js"></script>
