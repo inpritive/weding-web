@@ -106,7 +106,7 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('[data-aos], .timeline-item, .venue-img-wrap, .venue-info, .masonry-item').forEach(el => {
+document.querySelectorAll('[data-aos], .masonry-item').forEach(el => {
   observer.observe(el);
 });
 
@@ -183,5 +183,33 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if (!target) return;
     e.preventDefault();
     window.scrollTo({ top: target.offsetTop - nav.offsetHeight - 12, behavior: 'smooth' });
+  });
+});
+
+/* ─── PINTEREST PIN SAVE ACTION ───────────────────────────────── */
+document.querySelectorAll('.pin-save-btn').forEach(btn => {
+  const pinId = btn.dataset.pinId;
+  
+  // Check if already saved in local storage
+  if (localStorage.getItem(`wedding_pin_saved_${pinId}`) === 'true') {
+    btn.classList.add('saved');
+    btn.querySelector('span').textContent = 'Saved';
+  }
+  
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isSaved = btn.classList.toggle('saved');
+    
+    if (isSaved) {
+      localStorage.setItem(`wedding_pin_saved_${pinId}`, 'true');
+      btn.querySelector('span').textContent = 'Saved';
+      
+      // Heart pop effect
+      btn.style.transform = 'scale(1.2)';
+      setTimeout(() => btn.style.transform = '', 200);
+    } else {
+      localStorage.removeItem(`wedding_pin_saved_${pinId}`);
+      btn.querySelector('span').textContent = 'Save';
+    }
   });
 });

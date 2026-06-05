@@ -7,7 +7,7 @@
   <meta name="description" content="Join Emma & Liam on their royal wedding day — 12 September 2026. RSVP, schedule, venue and gallery." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -203,38 +203,102 @@
     <div class="section-header">
       <p class="section-eyebrow">Plan your day</p>
       <h2 class="section-title">The Schedule</h2>
+      <p class="section-subtitle">Curated moments for our wedding day. Save your favorite events to plan your attendance.</p>
     </div>
-    <div class="timeline">
-      <div class="timeline-item" data-aos>
-        <div class="timeline-icon">💍</div>
-        <div class="timeline-card">
-          <span class="tl-time">4:00 PM</span>
-          <h3>Ceremony</h3>
-          <p>Garden Pavilion — Exchange of vows beneath the canopy of ivory roses.</p>
+    <div class="pin-grid">
+      <!-- Pin 1: Ceremony -->
+      <div class="pin-card" data-aos>
+        <div class="pin-img-container">
+          <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80&fit=crop" alt="Ceremony" />
+          <div class="pin-time-badge">4:00 PM</div>
+          <button class="pin-save-btn" data-pin-id="ceremony" aria-label="Save ceremony">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/></svg>
+            <span>Save</span>
+          </button>
+        </div>
+        <div class="pin-content">
+          <span class="pin-location">📍 Garden Pavilion</span>
+          <h3 class="pin-title">The Ceremony</h3>
+          <p class="pin-desc">Exchange of vows beneath a canopy of ivory roses and candlelight, surrounded by love.</p>
+          <div class="pin-footer">
+            <div class="pin-user">
+              <span class="pin-avatar">E</span>
+              <span class="pin-avatar">L</span>
+              <span class="pin-user-text">Emma & Liam pinned this</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="timeline-item" data-aos>
-        <div class="timeline-icon">🥂</div>
-        <div class="timeline-card">
-          <span class="tl-time">5:15 PM</span>
-          <h3>Cocktail Hour</h3>
-          <p>The Terrace — Signature drinks, canapés and golden-hour portraits.</p>
+
+      <!-- Pin 2: Cocktail Hour -->
+      <div class="pin-card" data-aos>
+        <div class="pin-img-container">
+          <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=900&q=80&fit=crop" alt="Cocktails" />
+          <div class="pin-time-badge">5:15 PM</div>
+          <button class="pin-save-btn" data-pin-id="cocktails" aria-label="Save cocktail hour">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/></svg>
+            <span>Save</span>
+          </button>
+        </div>
+        <div class="pin-content">
+          <span class="pin-location">📍 The Terrace</span>
+          <h3 class="pin-title">Cocktail Hour</h3>
+          <p class="pin-desc">Artisan canapés, signature drinks, and beautiful memories in the golden glow of dusk.</p>
+          <div class="pin-footer">
+            <div class="pin-user">
+              <span class="pin-avatar">E</span>
+              <span class="pin-avatar">L</span>
+              <span class="pin-user-text">Emma & Liam pinned this</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="timeline-item" data-aos>
-        <div class="timeline-icon">🍽️</div>
-        <div class="timeline-card">
-          <span class="tl-time">6:30 PM</span>
-          <h3>Royal Dinner</h3>
-          <p>Grand Ballroom — A five-course farm-to-table feast beneath crystal chandeliers.</p>
+
+      <!-- Pin 3: Royal Dinner -->
+      <div class="pin-card" data-aos>
+        <div class="pin-img-container">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&fit=crop" alt="Dinner" />
+          <div class="pin-time-badge">6:30 PM</div>
+          <button class="pin-save-btn" data-pin-id="dinner" aria-label="Save dinner">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/></svg>
+            <span>Save</span>
+          </button>
+        </div>
+        <div class="pin-content">
+          <span class="pin-location">📍 Grand Ballroom</span>
+          <h3 class="pin-title">Royal Dinner</h3>
+          <p class="pin-desc">A five-course seasonal feast served beneath breathtaking crystal chandeliers.</p>
+          <div class="pin-footer">
+            <div class="pin-user">
+              <span class="pin-avatar">E</span>
+              <span class="pin-avatar">L</span>
+              <span class="pin-user-text">Emma & Liam pinned this</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="timeline-item" data-aos>
-        <div class="timeline-icon">🎶</div>
-        <div class="timeline-card">
-          <span class="tl-time">8:00 PM</span>
-          <h3>First Dance & Celebration</h3>
-          <p>Dance Floor — First dance, cake cutting, and celebration into the night.</p>
+
+      <!-- Pin 4: First Dance -->
+      <div class="pin-card" data-aos>
+        <div class="pin-img-container">
+          <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=900&q=80&fit=crop" alt="Dancing" />
+          <div class="pin-time-badge">8:00 PM</div>
+          <button class="pin-save-btn" data-pin-id="dancing" aria-label="Save first dance">
+            <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/></svg>
+            <span>Save</span>
+          </button>
+        </div>
+        <div class="pin-content">
+          <span class="pin-location">📍 Dance Floor</span>
+          <h3 class="pin-title">First Dance</h3>
+          <p class="pin-desc">A celebration into the night. Cake cutting, dancing, and memories to last a lifetime.</p>
+          <div class="pin-footer">
+            <div class="pin-user">
+              <span class="pin-avatar">E</span>
+              <span class="pin-avatar">L</span>
+              <span class="pin-user-text">Emma & Liam pinned this</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -243,10 +307,27 @@
   <!-- ─── VENUE ─────────────────────────────────────────────────── -->
   <section class="venue" id="venue">
     <div class="venue-inner">
-      <div class="venue-img-wrap" data-aos>
-        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&q=80&fit=crop" alt="Glasshouse Garden Venue" />
-        <div class="venue-badge">The Venue</div>
+      <!-- Pinterest Scrapbook Collage -->
+      <div class="venue-collage" data-aos>
+        <div class="collage-item main-img">
+          <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&q=80&fit=crop" alt="Glasshouse Garden Venue" />
+          <div class="collage-pin">📌</div>
+        </div>
+        <div class="collage-item detail-img">
+          <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80&fit=crop" alt="Venue florals & seating" />
+          <div class="collage-pin">📌</div>
+        </div>
+        <div class="collage-item polaroid-img">
+          <div class="polaroid-inner">
+            <div class="polaroid-photo">
+              <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80&fit=crop" alt="Emma & Liam" />
+            </div>
+            <div class="polaroid-caption">Glasshouse Garden, Mumbai</div>
+          </div>
+        </div>
       </div>
+
+      <!-- Venue Information Pinned Card -->
       <div class="venue-info" data-aos>
         <p class="section-eyebrow">Where to find us</p>
         <h2 class="section-title">Glasshouse Garden</h2>
@@ -257,6 +338,25 @@
         <div class="venue-map">
           <iframe title="Venue Map" src="https://maps.google.com/maps?q=Bandra+Mumbai&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+        
+        <!-- Pinned details info boxes -->
+        <div class="venue-details-grid">
+          <div class="venue-detail-box">
+            <span class="detail-icon">👔</span>
+            <div class="detail-text">
+              <strong>Dress Code</strong>
+              <span>Royal Black Tie & Dark Elegance</span>
+            </div>
+          </div>
+          <div class="venue-detail-box">
+            <span class="detail-icon">🚗</span>
+            <div class="detail-text">
+              <strong>Parking & Valet</strong>
+              <span>Valet parking available at the main gate</span>
+            </div>
+          </div>
+        </div>
+
         <a href="https://maps.google.com/?q=Bandra+Mumbai" target="_blank" class="venue-directions-btn">
           Get Directions →
         </a>
