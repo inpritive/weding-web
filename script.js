@@ -1,215 +1,238 @@
-/* ─── NAV SCROLL ──────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════
+   RONEET & SUHANA — Interactive JavaScript
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── NAV SCROLL ─────────────────────────────────────────────── */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
 });
 
-/* ─── MOBILE MENU ─────────────────────────────────────────────── */
+/* ─── MOBILE MENU ────────────────────────────────────────────── */
 const navToggle = document.getElementById('navToggle');
-const navLinks  = document.querySelector('.nav-links');
+const navLinks = document.getElementById('navLinks');
 navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
 navLinks.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => navLinks.classList.remove('open'));
 });
 
-/* ─── COUNTDOWN ───────────────────────────────────────────────── */
-const weddingDate = new Date('2026-09-12T16:00:00');
+/* ─── COUNTDOWN ──────────────────────────────────────────────── */
+const weddingDate = new Date('2026-12-18T09:00:00');
 function updateCountdown() {
   const diff = weddingDate - new Date();
   if (diff <= 0) {
-    document.querySelector('.countdown-section').innerHTML =
-      '<p class="countdown-label">Today is the day! 👑</p>';
+    document.getElementById('countdown').innerHTML =
+      '<p style="font-family:var(--font-serif);font-size:1.4rem;color:var(--white);">The celebrations have begun! 🎊</p>';
     return;
   }
   const d = Math.floor(diff / 86400000);
   const h = Math.floor((diff % 86400000) / 3600000);
   const m = Math.floor((diff % 3600000) / 60000);
   const s = Math.floor((diff % 60000) / 1000);
-  document.getElementById('cd-days').textContent  = String(d).padStart(2,'0');
-  document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
-  document.getElementById('cd-mins').textContent  = String(m).padStart(2,'0');
-  document.getElementById('cd-secs').textContent  = String(s).padStart(2,'0');
+  document.getElementById('cd-days').textContent  = String(d).padStart(2, '0');
+  document.getElementById('cd-hours').textContent = String(h).padStart(2, '0');
+  document.getElementById('cd-mins').textContent  = String(m).padStart(2, '0');
+  document.getElementById('cd-secs').textContent  = String(s).padStart(2, '0');
 }
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-/* ─── FUNCTION SLIDER ─────────────────────────────────────────── */
-const track   = document.getElementById('sliderTrack');
-const slides  = document.querySelectorAll('.slide');
-const dots    = document.querySelectorAll('.slider-dot');
-const thumbs  = document.querySelectorAll('.slider-thumb');
-const progDots= document.querySelectorAll('.slide-prog-dot');
-const prevBtn = document.getElementById('sliderPrev');
-const nextBtn = document.getElementById('sliderNext');
-let current   = 0;
-let autoPlay  = null;
-
-function goToSlide(idx) {
-  // Deactivate current
-  slides[current].classList.remove('active');
-  dots[current].classList.remove('active');
-  thumbs[current].classList.remove('active');
-  progDots[current] && progDots[current].classList.remove('active');
-
-  current = (idx + slides.length) % slides.length;
-
-  // Activate new
-  slides[current].classList.add('active');
-  dots[current].classList.add('active');
-  thumbs[current].classList.add('active');
-  progDots[current] && progDots[current].classList.add('active');
-
-  // Move track
-  track.style.transform = `translateX(-${current * 100}%)`;
-}
-
-function startAutoPlay() {
-  stopAutoPlay();
-  autoPlay = setInterval(() => goToSlide(current + 1), 5500);
-}
-function stopAutoPlay() {
-  if (autoPlay) clearInterval(autoPlay);
-}
-
-prevBtn.addEventListener('click', () => { goToSlide(current - 1); startAutoPlay(); });
-nextBtn.addEventListener('click', () => { goToSlide(current + 1); startAutoPlay(); });
-
-dots.forEach(d  => d.addEventListener('click',  () => { goToSlide(+d.dataset.dot);   startAutoPlay(); }));
-thumbs.forEach(t => t.addEventListener('click', () => { goToSlide(+t.dataset.thumb); startAutoPlay(); }));
-progDots.forEach(p => p.addEventListener('click', () => { goToSlide(+p.dataset.idx); startAutoPlay(); }));
-
-// Touch/swipe support
-let touchStartX = 0;
-const sliderWrapper = document.getElementById('slider');
-sliderWrapper.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
-sliderWrapper.addEventListener('touchend', e => {
-  const dx = e.changedTouches[0].clientX - touchStartX;
-  if (Math.abs(dx) > 50) {
-    dx < 0 ? goToSlide(current + 1) : goToSlide(current - 1);
-    startAutoPlay();
-  }
-});
-
-// Pause on hover
-sliderWrapper.addEventListener('mouseenter', stopAutoPlay);
-sliderWrapper.addEventListener('mouseleave', startAutoPlay);
-
-startAutoPlay();
-
-/* ─── SCROLL ANIMATIONS ───────────────────────────────────────── */
+/* ─── SCROLL ANIMATIONS ─────────────────────────────────────── */
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
     if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 130);
+      setTimeout(() => entry.target.classList.add('visible'), i * 120);
       observer.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 
-document.querySelectorAll('[data-aos], .masonry-item').forEach(el => {
+document.querySelectorAll('[data-aos], .roadmap-stop, .pin').forEach(el => {
   observer.observe(el);
 });
 
-/* ─── RSVP FORM ───────────────────────────────────────────────── */
-const form    = document.getElementById('rsvp-form');
-const success = document.getElementById('form-success');
-const btn     = document.getElementById('rsvp-submit');
-
-form.addEventListener('submit', async e => {
-  e.preventDefault();
-  if (!form.checkValidity()) { form.reportValidity(); return; }
-  btn.textContent = 'Sending...';
-  btn.disabled = true;
-  await new Promise(r => setTimeout(r, 1400));
-  btn.hidden = true;
-  success.hidden = false;
-  form.querySelectorAll('input, select, textarea').forEach(el => el.disabled = true);
-});
-
-/* ─── GALLERY LIGHTBOX ────────────────────────────────────────── */
-const lb    = document.createElement('div');
-lb.id = 'lightbox';
-lb.style.cssText = `
-  display:none; position:fixed; inset:0; z-index:999;
-  background:rgba(8,11,18,0.96); backdrop-filter:blur(16px);
-  align-items:center; justify-content:center; cursor:zoom-out;
-`;
-const lbImg = document.createElement('img');
-lbImg.style.cssText = `
-  max-width:88vw; max-height:86vh; border-radius:12px;
-  box-shadow:0 32px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(201,151,42,0.2);
-  object-fit:contain; width:auto; height:auto;
-`;
-const lbClose = document.createElement('button');
-lbClose.innerHTML = '&times;';
-lbClose.style.cssText = `
-  position:absolute; top:1.5rem; right:2rem;
-  font-size:2.5rem; color:rgba(245,237,224,0.6); background:none;
-  border:none; cursor:pointer; line-height:1; transition:color 0.2s;
-`;
-lbClose.onmouseenter = () => lbClose.style.color = 'var(--gold-light)';
-lbClose.onmouseleave = () => lbClose.style.color = 'rgba(245,237,224,0.6)';
-lb.appendChild(lbImg);
-lb.appendChild(lbClose);
-document.body.appendChild(lb);
-
-document.querySelectorAll('.masonry-item').forEach(item => {
-  item.addEventListener('click', () => {
-    lbImg.src = item.querySelector('img').src;
-    lb.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-  });
-});
-[lb, lbClose].forEach(el => {
-  el.addEventListener('click', () => {
-    lb.style.display = 'none';
-    document.body.style.overflow = '';
-  });
-});
-lbImg.addEventListener('click', e => e.stopPropagation());
-
-// Close on Escape
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && lb.style.display === 'flex') {
-    lb.style.display = 'none';
-    document.body.style.overflow = '';
-  }
-});
-
-/* ─── SMOOTH SCROLL (fixed nav offset) ───────────────────────── */
+/* ─── SMOOTH SCROLL ──────────────────────────────────────────── */
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
     if (!target) return;
     e.preventDefault();
-    window.scrollTo({ top: target.offsetTop - nav.offsetHeight - 12, behavior: 'smooth' });
+    window.scrollTo({
+      top: target.offsetTop - nav.offsetHeight - 16,
+      behavior: 'smooth'
+    });
   });
 });
 
-/* ─── PINTEREST PIN SAVE ACTION ───────────────────────────────── */
-document.querySelectorAll('.pin-save-btn').forEach(btn => {
-  const pinId = btn.dataset.pinId;
-  
-  // Check if already saved in local storage
-  if (localStorage.getItem(`wedding_pin_saved_${pinId}`) === 'true') {
-    btn.classList.add('saved');
-    btn.querySelector('span').textContent = 'Saved';
+/* ─── MODALS ─────────────────────────────────────────────────── */
+const overlay = document.getElementById('modalOverlay');
+const allModals = document.querySelectorAll('.modal');
+
+document.querySelectorAll('.stop-modal-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const modalId = btn.dataset.modal;
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    overlay.classList.add('open');
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+function closeAllModals() {
+  overlay.classList.remove('open');
+  allModals.forEach(m => m.classList.remove('open'));
+  document.body.style.overflow = '';
+}
+
+overlay.addEventListener('click', (e) => {
+  if (e.target === overlay) closeAllModals();
+});
+document.querySelectorAll('.modal-close').forEach(btn => {
+  btn.addEventListener('click', closeAllModals);
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeAllModals();
+});
+
+/* ─── JOOTA CHUPAI GAME ─────────────────────────────────────── */
+let brideVotes = 0;
+let groomVotes = 0;
+
+const ransomFill = document.getElementById('ransomFill');
+const ransomIndicator = document.getElementById('ransomIndicator');
+const brideCountEl = document.getElementById('brideCount');
+const groomCountEl = document.getElementById('groomCount');
+const jootaStatus = document.getElementById('jootaStatus');
+const shoeIcon = document.getElementById('shoe-icon');
+
+function updateRansom() {
+  const total = brideVotes + groomVotes;
+  let pct = total === 0 ? 50 : (brideVotes / total) * 100;
+  pct = Math.max(5, Math.min(95, pct));
+
+  ransomFill.style.width = pct + '%';
+  ransomIndicator.style.left = pct + '%';
+  brideCountEl.textContent = brideVotes + (brideVotes === 1 ? ' supporter' : ' supporters');
+  groomCountEl.textContent = groomVotes + (groomVotes === 1 ? ' defender' : ' defenders');
+
+  // Status messages
+  const diff = brideVotes - groomVotes;
+  if (total === 0) {
+    jootaStatus.textContent = 'The battle is evenly matched! Cast your vote above.';
+  } else if (diff > 5) {
+    jootaStatus.textContent = '👰 The bridesmaids are winning! The ransom demands are sky-high!';
+    shoeIcon.textContent = '👠';
+  } else if (diff < -5) {
+    jootaStatus.textContent = '🤵 The groom\'s squad is dominating! Those shoes might just come back!';
+    shoeIcon.textContent = '👞';
+  } else if (diff > 0) {
+    jootaStatus.textContent = '👰 Bridesmaids are slightly ahead... keep bidding!';
+  } else if (diff < 0) {
+    jootaStatus.textContent = '🤵 Groom\'s team is making a comeback!';
+  } else {
+    jootaStatus.textContent = '⚖️ It\'s a perfect tie! Who will tip the scales?';
   }
-  
-  btn.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const isSaved = btn.classList.toggle('saved');
-    
-    if (isSaved) {
-      localStorage.setItem(`wedding_pin_saved_${pinId}`, 'true');
-      btn.querySelector('span').textContent = 'Saved';
-      
-      // Heart pop effect
-      btn.style.transform = 'scale(1.2)';
-      setTimeout(() => btn.style.transform = '', 200);
-    } else {
-      localStorage.removeItem(`wedding_pin_saved_${pinId}`);
-      btn.querySelector('span').textContent = 'Save';
-    }
+}
+
+document.getElementById('bribeBride').addEventListener('click', () => {
+  brideVotes++;
+  updateRansom();
+  // Pulse animation
+  const btn = document.getElementById('bribeBride');
+  btn.style.transform = 'scale(1.08)';
+  setTimeout(() => btn.style.transform = '', 200);
+});
+
+document.getElementById('supportGroom').addEventListener('click', () => {
+  groomVotes++;
+  updateRansom();
+  const btn = document.getElementById('supportGroom');
+  btn.style.transform = 'scale(1.08)';
+  setTimeout(() => btn.style.transform = '', 200);
+});
+
+/* ─── CUISINE TABS ───────────────────────────────────────────── */
+const cuisineTabs = document.querySelectorAll('.cuisine-tab');
+const cuisinePanels = document.querySelectorAll('.cuisine-panel');
+
+cuisineTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const target = tab.dataset.tab;
+
+    cuisineTabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    cuisinePanels.forEach(p => {
+      p.classList.remove('active');
+      if (p.id === 'panel-' + target) p.classList.add('active');
+    });
+  });
+});
+
+/* ─── RSVP MULTI-STEP FORM ───────────────────────────────────── */
+const formSteps = document.querySelectorAll('.form-step');
+const progressSteps = document.querySelectorAll('.rsvp-step');
+
+function showStep(stepNum) {
+  formSteps.forEach(s => s.classList.remove('active'));
+  const target = document.getElementById('step' + stepNum);
+  if (target) target.classList.add('active');
+
+  progressSteps.forEach(ps => {
+    const psNum = parseInt(ps.dataset.step);
+    ps.classList.remove('active', 'completed');
+    if (psNum === stepNum) ps.classList.add('active');
+    else if (psNum < stepNum) ps.classList.add('completed');
+  });
+}
+
+document.querySelectorAll('.form-next-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const nextStep = parseInt(btn.dataset.next);
+    showStep(nextStep);
+  });
+});
+
+document.querySelectorAll('.form-back-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const prevStep = parseInt(btn.dataset.prev);
+    showStep(prevStep);
+  });
+});
+
+// Submit
+const rsvpForm = document.getElementById('rsvpForm');
+const rsvpSuccess = document.getElementById('rsvpSuccess');
+const rsvpSubmit = document.getElementById('rsvpSubmit');
+
+rsvpForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  rsvpSubmit.textContent = 'Sending...';
+  rsvpSubmit.disabled = true;
+
+  // Simulate network delay
+  await new Promise(r => setTimeout(r, 1500));
+
+  rsvpForm.style.display = 'none';
+  document.querySelector('.rsvp-progress').style.display = 'none';
+  rsvpSuccess.hidden = false;
+});
+
+/* ─── TEAM BRIDE/GROOM SANGEET BUTTONS ───────────────────────── */
+document.querySelectorAll('.team-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.team-btn').forEach(b => {
+      b.style.opacity = '0.5';
+      b.style.transform = 'scale(0.95)';
+    });
+    btn.style.opacity = '1';
+    btn.style.transform = 'scale(1.05)';
+    setTimeout(() => {
+      document.querySelectorAll('.team-btn').forEach(b => {
+        b.style.opacity = '';
+        b.style.transform = '';
+      });
+    }, 1500);
   });
 });

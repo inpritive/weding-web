@@ -3,485 +3,653 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emma &amp; Liam — 12 September 2026</title>
-  <meta name="description" content="Join Emma & Liam on their royal wedding day — 12 September 2026. RSVP, schedule, venue and gallery." />
+  <title>Roneet & Suhana — A Royal Hindu Wedding</title>
+  <meta name="description" content="Join Roneet & Suhana as they celebrate their union across four magical days of Hindu wedding traditions — Haldi, Sangeet, Vivah & Reception." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ─── NAV ──────────────────────────────────────────────────── -->
+  <!-- ═══════ NAVIGATION ═══════ -->
   <nav class="nav" id="nav">
-    <a href="#" class="nav-logo">E & L</a>
-    <ul class="nav-links">
-      <li><a href="#functions">Functions</a></li>
-      <li><a href="#schedule">Schedule</a></li>
-      <li><a href="#venue">Venue</a></li>
-      <li><a href="#gallery">Gallery</a></li>
+    <a href="#" class="nav-monogram">R <span>&</span> S</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#roadmap">Events</a></li>
+      <li><a href="#joota-chupai">Traditions</a></li>
+      <li><a href="#lookbook">Lookbook</a></li>
+      <li><a href="#mahabhoj">Cuisine</a></li>
       <li><a href="#rsvp" class="nav-cta">RSVP</a></li>
     </ul>
-    <button class="nav-toggle" aria-label="menu" id="navToggle">
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- ─── HERO ─────────────────────────────────────────────────── -->
-  <section class="hero" id="story">
+  <!-- ═══════ HERO ═══════ -->
+  <section class="hero" id="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1800&q=85&fit=crop" alt="Royal Wedding" class="hero-img" />
+      <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1800&q=85&fit=crop" alt="Wedding couple" class="hero-img" />
       <div class="hero-overlay"></div>
     </div>
-    <!-- Corner ornaments -->
-    <div class="hero-ornament tl"></div>
-    <div class="hero-ornament tr"></div>
-    <div class="hero-ornament bl"></div>
-    <div class="hero-ornament br"></div>
 
+    <!-- Decorative gold monogram frame -->
     <div class="hero-content">
-      <span class="hero-crown">👑</span>
-      <p class="hero-eyebrow">A Royal Celebration</p>
-      <h1 class="hero-names">Emma <span class="amp">&</span> Liam</h1>
-      <p class="hero-date">
-        <span class="date-day">Saturday</span>
-        12 · September · 2026
-      </p>
-      <div class="hero-divider">
-        <span class="line"></span>
-        <span class="hero-diamond"></span>
-        <span class="line"></span>
+      <div class="monogram-frame">
+        <div class="monogram-border">
+          <span class="monogram-r">R</span>
+          <span class="monogram-amp">&</span>
+          <span class="monogram-s">S</span>
+        </div>
       </div>
-      <a href="#rsvp" class="hero-btn">
-        <span>Kindly RSVP</span>
-        <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor"/></svg>
+
+      <p class="hero-tagline">request the pleasure of your company at their</p>
+      <h1 class="hero-title">Royal Wedding</h1>
+      <p class="hero-subtitle">A celebration spanning four magical days of love, laughter & sacred traditions</p>
+
+      <div class="hero-divider">
+        <span class="div-line"></span>
+        <span class="div-lotus">✦</span>
+        <span class="div-line"></span>
+      </div>
+
+      <!-- Countdown -->
+      <div class="countdown" id="countdown">
+        <div class="cd-unit"><span id="cd-days">--</span><small>Days</small></div>
+        <div class="cd-sep">·</div>
+        <div class="cd-unit"><span id="cd-hours">--</span><small>Hours</small></div>
+        <div class="cd-sep">·</div>
+        <div class="cd-unit"><span id="cd-mins">--</span><small>Minutes</small></div>
+        <div class="cd-sep">·</div>
+        <div class="cd-unit"><span id="cd-secs">--</span><small>Seconds</small></div>
+      </div>
+
+      <a href="#roadmap" class="hero-scroll-btn">
+        <span>Begin Our Journey</span>
+        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 16l-6-6h12z" fill="currentColor"/></svg>
       </a>
     </div>
-    <a href="#countdown" class="hero-scroll" aria-label="scroll">
-      <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 16l-6-6 1.41-1.41L12 13.17l4.59-4.58L18 10z" fill="currentColor"/></svg>
-      scroll
-    </a>
   </section>
 
-  <!-- ─── COUNTDOWN ─────────────────────────────────────────────── -->
-  <section class="countdown-section" id="countdown">
-    <p class="countdown-label">Until we say "I do"</p>
-    <div class="countdown" id="countdown-timer">
-      <div class="count-item"><span id="cd-days">--</span><label>Days</label></div>
-      <div class="count-sep">:</div>
-      <div class="count-item"><span id="cd-hours">--</span><label>Hours</label></div>
-      <div class="count-sep">:</div>
-      <div class="count-item"><span id="cd-mins">--</span><label>Minutes</label></div>
-      <div class="count-sep">:</div>
-      <div class="count-item"><span id="cd-secs">--</span><label>Seconds</label></div>
-    </div>
-  </section>
-
-  <!-- ─── FUNCTION SLIDER ───────────────────────────────────────── -->
-  <section class="functions-section" id="functions">
-    <div class="section-header">
-      <p class="section-eyebrow">The Royal Events</p>
-      <h2 class="section-title">Wedding Functions</h2>
-      <p class="section-subtitle">A celebration curated across four magical moments</p>
+  <!-- ═══════ EVENT ROADMAP ═══════ -->
+  <section class="roadmap" id="roadmap">
+    <div class="section-intro">
+      <span class="section-tag">The Celebration</span>
+      <h2 class="section-heading">Our Wedding Journey</h2>
+      <p class="section-sub">Four days of love, rituals, and unforgettable memories — follow the path to celebrate with us.</p>
     </div>
 
-    <div class="slider-wrapper" id="slider">
-      <div class="slider-track" id="sliderTrack">
+    <div class="roadmap-path">
+      <!-- SVG Winding Path -->
+      <svg class="roadmap-svg" viewBox="0 0 100 1600" preserveAspectRatio="none">
+        <path class="road-line" d="M50,0 C50,100 85,150 85,250 C85,350 15,400 15,500 C15,600 85,650 85,750 C85,850 15,900 15,1000 C15,1100 85,1150 85,1250 C85,1350 50,1400 50,1600" fill="none" stroke-dasharray="8 6"/>
+      </svg>
 
-        <!-- Slide 1: Ceremony -->
-        <div class="slide active" data-slide="0">
-          <div class="slide-bg">
-            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1600&q=80&fit=crop" alt="Ceremony" />
+      <!-- STOP 1: Haldi & Mehendi -->
+      <div class="roadmap-stop stop-left" data-aos>
+        <div class="stop-marker">
+          <span class="marker-num">01</span>
+          <span class="marker-dot"></span>
+        </div>
+        <div class="stop-card haldi-card">
+          <div class="stop-img">
+            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80&fit=crop" alt="Haldi ceremony with marigold flowers" />
+            <div class="stop-date-badge">Dec 18, 2026</div>
           </div>
-          <div class="slide-overlay"></div>
-          <div class="slide-content">
-            <div class="slide-inner">
-              <span class="slide-number">01</span>
-              <div class="slide-time">4:00 PM · Garden Pavilion</div>
-              <h3 class="slide-title">The Ceremony</h3>
-              <p class="slide-desc">Beneath a canopy of ivory roses and soft candlelight, we exchange our vows in the presence of the people we love most.</p>
-              <span class="slide-badge">💍 Sacred Vows</span>
+          <div class="stop-info">
+            <span class="stop-vibe">☀️ Sun-soaked & Playful</span>
+            <h3 class="stop-title">Haldi & Mehendi</h3>
+            <p class="stop-desc">An afternoon drenched in turmeric, marigold garlands, and intricate henna artistry. Let the colours of joy begin.</p>
+            <div class="stop-details">
+              <span class="stop-time">🕐 11:00 AM – 5:00 PM</span>
+              <span class="stop-venue">📍 The Garden Pavilion, Oberoi Udaivilas</span>
             </div>
-          </div>
-          <div class="slide-progress" id="slideProgress">
-            <div class="slide-prog-dot active" data-idx="0"></div>
-            <div class="slide-prog-dot" data-idx="1"></div>
-            <div class="slide-prog-dot" data-idx="2"></div>
-            <div class="slide-prog-dot" data-idx="3"></div>
+            <button class="stop-modal-btn" data-modal="modal-haldi">Dress Code & Mood Board →</button>
           </div>
         </div>
+      </div>
 
-        <!-- Slide 2: Cocktails -->
-        <div class="slide" data-slide="1">
-          <div class="slide-bg">
-            <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=1600&q=80&fit=crop" alt="Cocktail Hour" />
+      <!-- STOP 2: Sangeet Night -->
+      <div class="roadmap-stop stop-right" data-aos>
+        <div class="stop-marker">
+          <span class="marker-num">02</span>
+          <span class="marker-dot"></span>
+        </div>
+        <div class="stop-card sangeet-card">
+          <div class="stop-img">
+            <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=800&q=80&fit=crop" alt="Sangeet night dance floor with lights" />
+            <div class="stop-date-badge">Dec 19, 2026</div>
           </div>
-          <div class="slide-overlay"></div>
-          <div class="slide-content">
-            <div class="slide-inner">
-              <span class="slide-number">02</span>
-              <div class="slide-time">5:15 PM · The Terrace</div>
-              <h3 class="slide-title">Cocktail Hour</h3>
-              <p class="slide-desc">Signature cocktails, artisan canapés and the golden glow of dusk. Mingle, laugh, and capture memories on the terrace.</p>
-              <span class="slide-badge">🥂 Toast & Celebrate</span>
+          <div class="stop-info">
+            <span class="stop-vibe">🌙 Twilight Glamour</span>
+            <h3 class="stop-title">Sangeet Night</h3>
+            <p class="stop-desc">A starlit evening of music, choreographed performances, and the epic Team Bride vs. Team Groom dance-off!</p>
+            <div class="stop-details">
+              <span class="stop-time">🕐 7:00 PM – Midnight</span>
+              <span class="stop-venue">📍 The Lakeside Amphitheatre</span>
             </div>
+            <!-- Dance-off mini element -->
+            <div class="danceoff-mini">
+              <button class="team-btn team-bride" data-team="bride">💃 Team Bride</button>
+              <span class="vs-text">VS</span>
+              <button class="team-btn team-groom" data-team="groom">🕺 Team Groom</button>
+            </div>
+            <button class="stop-modal-btn" data-modal="modal-sangeet">Dress Code & Mood Board →</button>
           </div>
         </div>
+      </div>
 
-        <!-- Slide 3: Dinner -->
-        <div class="slide" data-slide="2">
-          <div class="slide-bg">
-            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80&fit=crop" alt="Royal Dinner" />
+      <!-- STOP 3: The Vivah Sanskar -->
+      <div class="roadmap-stop stop-left" data-aos>
+        <div class="stop-marker">
+          <span class="marker-num">03</span>
+          <span class="marker-dot"></span>
+        </div>
+        <div class="stop-card vivah-card">
+          <div class="stop-img">
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80&fit=crop" alt="Sacred mandap wedding ceremony" />
+            <div class="stop-date-badge">Dec 20, 2026</div>
           </div>
-          <div class="slide-overlay"></div>
-          <div class="slide-content">
-            <div class="slide-inner">
-              <span class="slide-number">03</span>
-              <div class="slide-time">6:30 PM · Grand Ballroom</div>
-              <h3 class="slide-title">Royal Dinner</h3>
-              <p class="slide-desc">A sumptuous farm-to-table feast served beneath crystal chandeliers. Five courses of seasonal cuisine, paired with the finest wines.</p>
-              <span class="slide-badge">🍽️ Fine Dining</span>
+          <div class="stop-info">
+            <span class="stop-vibe">🙏 Sacred & Serene</span>
+            <h3 class="stop-title">The Vivah Sanskar</h3>
+            <p class="stop-desc">The sacred union — Varmala, Saptapadi around the holy fire, Kanyadaan, and the emotional Vidaai.</p>
+            <div class="stop-details">
+              <span class="stop-time">🕐 9:00 AM – 2:00 PM</span>
+              <span class="stop-venue">📍 The Royal Mandap, Palace Grounds</span>
             </div>
+            <div class="vivah-rituals">
+              <span class="ritual-tag">Varmala</span>
+              <span class="ritual-tag">Saptapadi</span>
+              <span class="ritual-tag">Kanyadaan</span>
+              <span class="ritual-tag">Vidaai</span>
+            </div>
+            <button class="stop-modal-btn" data-modal="modal-vivah">Dress Code & Mood Board →</button>
           </div>
         </div>
+      </div>
 
-        <!-- Slide 4: Dancing -->
-        <div class="slide" data-slide="3">
-          <div class="slide-bg">
-            <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=1600&q=80&fit=crop" alt="Dancing" />
+      <!-- STOP 4: The Royal Reception -->
+      <div class="roadmap-stop stop-right" data-aos>
+        <div class="stop-marker">
+          <span class="marker-num">04</span>
+          <span class="marker-dot"></span>
+        </div>
+        <div class="stop-card reception-card">
+          <div class="stop-img">
+            <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=800&q=80&fit=crop" alt="Elegant reception with chandeliers" />
+            <div class="stop-date-badge">Dec 20, 2026</div>
           </div>
-          <div class="slide-overlay"></div>
-          <div class="slide-content">
-            <div class="slide-inner">
-              <span class="slide-number">04</span>
-              <div class="slide-time">8:00 PM · Dance Floor</div>
-              <h3 class="slide-title">First Dance</h3>
-              <p class="slide-desc">The night comes alive. Our first dance, cake cutting, and then the floor is yours — dance until the stars fade.</p>
-              <span class="slide-badge">🎶 Music & Dancing</span>
+          <div class="stop-info">
+            <span class="stop-vibe">🥂 Black-Tie Elegance</span>
+            <h3 class="stop-title">The Royal Reception</h3>
+            <p class="stop-desc">A grand gala of champagne toasts, gourmet dining, and celebration under a thousand twinkling lights.</p>
+            <div class="stop-details">
+              <span class="stop-time">🕐 7:00 PM – Late</span>
+              <span class="stop-venue">📍 The Grand Ballroom, City Palace</span>
             </div>
+            <button class="stop-modal-btn" data-modal="modal-reception">Dress Code & Mood Board →</button>
           </div>
         </div>
-
-      </div><!-- /slider-track -->
-    </div><!-- /slider-wrapper -->
-
-    <!-- Thumbnails -->
-    <div class="slider-thumbs" id="sliderThumbs">
-      <div class="slider-thumb active" data-thumb="0">
-        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=200&q=70&fit=crop" alt="Ceremony" />
       </div>
-      <div class="slider-thumb" data-thumb="1">
-        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=200&q=70&fit=crop" alt="Cocktails" />
-      </div>
-      <div class="slider-thumb" data-thumb="2">
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=200&q=70&fit=crop" alt="Dinner" />
-      </div>
-      <div class="slider-thumb" data-thumb="3">
-        <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=200&q=70&fit=crop" alt="Dancing" />
-      </div>
-    </div>
-
-    <!-- Controls -->
-    <div class="slider-controls">
-      <button class="slider-btn" id="sliderPrev" aria-label="Previous">
-        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"/></svg>
-      </button>
-      <div class="slider-dots" id="sliderDots">
-        <div class="slider-dot active" data-dot="0"></div>
-        <div class="slider-dot" data-dot="1"></div>
-        <div class="slider-dot" data-dot="2"></div>
-        <div class="slider-dot" data-dot="3"></div>
-      </div>
-      <button class="slider-btn" id="sliderNext" aria-label="Next">
-        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"/></svg>
-      </button>
     </div>
   </section>
 
-  <!-- ─── SCHEDULE ───────────────────────────────────────────────── -->
-  <section class="schedule" id="schedule">
-    <div class="section-header">
-      <p class="section-eyebrow">Plan your day</p>
-      <h2 class="section-title">The Schedule</h2>
-      <p class="section-subtitle">Curated moments for our wedding day. Save your favorite events to plan your attendance.</p>
+  <!-- ═══════ JOOTA CHUPAI ═══════ -->
+  <section class="joota-chupai" id="joota-chupai">
+    <div class="section-intro">
+      <span class="section-tag">A Playful Tradition</span>
+      <h2 class="section-heading">Joota Chupai</h2>
+      <p class="section-sub">The groom's shoes have been "borrowed" by the bride's squad. Will you help bribe the bridesmaids, or will you support the groom's defence fund?</p>
     </div>
-    <div class="pin-grid">
-      <!-- Pin 1: Ceremony -->
-      <div class="pin-card" data-aos>
-        <div class="pin-img-container">
-          <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=900&q=80&fit=crop" alt="Ceremony" />
-          <div class="pin-time-badge">4:00 PM</div>
-          <button class="pin-save-btn" data-pin-id="ceremony" aria-label="Save ceremony">
-            <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/></svg>
-            <span>Save</span>
+
+    <div class="joota-game">
+      <div class="joota-visual">
+        <div class="shoe-container">
+          <span class="shoe-emoji" id="shoe-icon">👠</span>
+          <div class="shoe-sparkles">
+            <span>✨</span><span>✨</span><span>✨</span>
+          </div>
+        </div>
+        <div class="ransom-meter">
+          <div class="meter-label">Ransom Meter</div>
+          <div class="meter-track">
+            <div class="meter-fill" id="ransomFill" style="width: 50%"></div>
+            <div class="meter-indicator" id="ransomIndicator" style="left: 50%">₹</div>
+          </div>
+          <div class="meter-ends">
+            <span>👰 Bridesmaids Win</span>
+            <span>🤵 Groom Wins</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="joota-actions">
+        <div class="joota-side bride-side">
+          <h4>💃 Bribe the Bridesmaids</h4>
+          <p>"The shoes stay hidden until demands are met!"</p>
+          <button class="joota-btn bride-btn" id="bribeBride">
+            <span>Add ₹500 to Ransom</span>
+            <span class="btn-count" id="brideCount">0 supporters</span>
           </button>
         </div>
-        <div class="pin-content">
-          <span class="pin-location">📍 Garden Pavilion</span>
-          <h3 class="pin-title">The Ceremony</h3>
-          <p class="pin-desc">Exchange of vows beneath a canopy of ivory roses and candlelight, surrounded by love.</p>
-          <div class="pin-footer">
-            <div class="pin-user">
-              <span class="pin-avatar">E</span>
-              <span class="pin-avatar">L</span>
-              <span class="pin-user-text">Emma & Liam pinned this</span>
-            </div>
+        <div class="joota-vs">VS</div>
+        <div class="joota-side groom-side">
+          <h4>🕺 Support the Groom</h4>
+          <p>"Help the dulha get his shoes back!"</p>
+          <button class="joota-btn groom-btn" id="supportGroom">
+            <span>Add ₹500 to Defence</span>
+            <span class="btn-count" id="groomCount">0 defenders</span>
+          </button>
+        </div>
+      </div>
+      <p class="joota-status" id="jootaStatus">The battle is evenly matched! Cast your vote above.</p>
+    </div>
+  </section>
+
+  <!-- ═══════ PINTEREST LOOKBOOK ═══════ -->
+  <section class="lookbook" id="lookbook">
+    <div class="section-intro">
+      <span class="section-tag">Style Inspiration</span>
+      <h2 class="section-heading">The Lookbook</h2>
+      <p class="section-sub">Curated outfit inspirations, colour palettes, and decor mood boards — your Pinterest guide for every event.</p>
+    </div>
+
+    <div class="masonry-pins">
+      <div class="pin-col">
+        <div class="pin" data-aos>
+          <div class="pin-image tall">
+            <img src="https://images.unsplash.com/photo-1610173827607-d tried29c19b?w=600&q=80&fit=crop" alt="Bridal lehenga" />
+          </div>
+          <div class="pin-caption">
+            <strong>Bridal Lehenga</strong>
+            <span>Vivah Sanskar</span>
+          </div>
+        </div>
+        <div class="pin" data-aos>
+          <div class="pin-image">
+            <img src="https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=600&q=80&fit=crop" alt="Marigold decor" />
+          </div>
+          <div class="pin-caption">
+            <strong>Marigold Magic</strong>
+            <span>Haldi Decor</span>
           </div>
         </div>
       </div>
-
-      <!-- Pin 2: Cocktail Hour -->
-      <div class="pin-card" data-aos>
-        <div class="pin-img-container">
-          <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=900&q=80&fit=crop" alt="Cocktails" />
-          <div class="pin-time-badge">5:15 PM</div>
-          <button class="pin-save-btn" data-pin-id="cocktails" aria-label="Save cocktail hour">
-            <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/></svg>
-            <span>Save</span>
-          </button>
+      <div class="pin-col">
+        <div class="pin" data-aos>
+          <div class="pin-image">
+            <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=600&q=80&fit=crop" alt="Gold jewellery" />
+          </div>
+          <div class="pin-caption">
+            <strong>Gold Heirloom</strong>
+            <span>Jewellery</span>
+          </div>
         </div>
-        <div class="pin-content">
-          <span class="pin-location">📍 The Terrace</span>
-          <h3 class="pin-title">Cocktail Hour</h3>
-          <p class="pin-desc">Artisan canapés, signature drinks, and beautiful memories in the golden glow of dusk.</p>
-          <div class="pin-footer">
-            <div class="pin-user">
-              <span class="pin-avatar">E</span>
-              <span class="pin-avatar">L</span>
-              <span class="pin-user-text">Emma & Liam pinned this</span>
-            </div>
+        <div class="pin" data-aos>
+          <div class="pin-image tall">
+            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80&fit=crop" alt="Floral mandap" />
+          </div>
+          <div class="pin-caption">
+            <strong>The Sacred Mandap</strong>
+            <span>Ceremony Decor</span>
           </div>
         </div>
       </div>
-
-      <!-- Pin 3: Royal Dinner -->
-      <div class="pin-card" data-aos>
-        <div class="pin-img-container">
-          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&fit=crop" alt="Dinner" />
-          <div class="pin-time-badge">6:30 PM</div>
-          <button class="pin-save-btn" data-pin-id="dinner" aria-label="Save dinner">
-            <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/></svg>
-            <span>Save</span>
-          </button>
+      <div class="pin-col">
+        <div class="pin" data-aos>
+          <div class="pin-image tall">
+            <img src="https://images.unsplash.com/photo-1511285560929-80b456503681?w=600&q=80&fit=crop" alt="Sherwani styling" />
+          </div>
+          <div class="pin-caption">
+            <strong>Groom's Sherwani</strong>
+            <span>Reception Look</span>
+          </div>
         </div>
-        <div class="pin-content">
-          <span class="pin-location">📍 Grand Ballroom</span>
-          <h3 class="pin-title">Royal Dinner</h3>
-          <p class="pin-desc">A five-course seasonal feast served beneath breathtaking crystal chandeliers.</p>
-          <div class="pin-footer">
-            <div class="pin-user">
-              <span class="pin-avatar">E</span>
-              <span class="pin-avatar">L</span>
-              <span class="pin-user-text">Emma & Liam pinned this</span>
-            </div>
+        <div class="pin" data-aos>
+          <div class="pin-image">
+            <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=600&q=80&fit=crop" alt="Sangeet night stage" />
+          </div>
+          <div class="pin-caption">
+            <strong>Stage Design</strong>
+            <span>Sangeet Night</span>
           </div>
         </div>
       </div>
-
-      <!-- Pin 4: First Dance -->
-      <div class="pin-card" data-aos>
-        <div class="pin-img-container">
-          <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=900&q=80&fit=crop" alt="Dancing" />
-          <div class="pin-time-badge">8:00 PM</div>
-          <button class="pin-save-btn" data-pin-id="dancing" aria-label="Save first dance">
-            <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/></svg>
-            <span>Save</span>
-          </button>
+      <div class="pin-col">
+        <div class="pin" data-aos>
+          <div class="pin-image">
+            <img src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=600&q=80&fit=crop" alt="Table decor" />
+          </div>
+          <div class="pin-caption">
+            <strong>Table Setting</strong>
+            <span>Reception</span>
+          </div>
         </div>
-        <div class="pin-content">
-          <span class="pin-location">📍 Dance Floor</span>
-          <h3 class="pin-title">First Dance</h3>
-          <p class="pin-desc">A celebration into the night. Cake cutting, dancing, and memories to last a lifetime.</p>
-          <div class="pin-footer">
-            <div class="pin-user">
-              <span class="pin-avatar">E</span>
-              <span class="pin-avatar">L</span>
-              <span class="pin-user-text">Emma & Liam pinned this</span>
-            </div>
+        <div class="pin" data-aos>
+          <div class="pin-image tall">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=80&fit=crop" alt="Colour palette sage and gold" />
+          </div>
+          <div class="pin-caption">
+            <strong>Sage & Gold Palette</strong>
+            <span>Colour Inspo</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── VENUE ─────────────────────────────────────────────────── -->
-  <section class="venue" id="venue">
-    <div class="venue-inner">
-      <!-- Pinterest Scrapbook Collage -->
-      <div class="venue-collage" data-aos>
-        <div class="collage-item main-img">
-          <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=1200&q=80&fit=crop" alt="Glasshouse Garden Venue" />
-          <div class="collage-pin">📌</div>
-        </div>
-        <div class="collage-item detail-img">
-          <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=600&q=80&fit=crop" alt="Venue florals & seating" />
-          <div class="collage-pin">📌</div>
-        </div>
-        <div class="collage-item polaroid-img">
-          <div class="polaroid-inner">
-            <div class="polaroid-photo">
-              <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80&fit=crop" alt="Emma & Liam" />
-            </div>
-            <div class="polaroid-caption">Glasshouse Garden, Mumbai</div>
+  <!-- ═══════ MAHABHOJ ═══════ -->
+  <section class="mahabhoj" id="mahabhoj">
+    <div class="section-intro">
+      <span class="section-tag">A Culinary Odyssey</span>
+      <h2 class="section-heading">The Grand Mahabhoj</h2>
+      <p class="section-sub">A feast fit for royalty. Explore what awaits your palate across our curated culinary stations.</p>
+    </div>
+
+    <div class="cuisine-tabs">
+      <button class="cuisine-tab active" data-tab="live-counters">🍛 Live Counters</button>
+      <button class="cuisine-tab" data-tab="mithai-bar">🍬 Mithai Bar</button>
+      <button class="cuisine-tab" data-tab="mocktails">🍹 Fusion Mocktails</button>
+    </div>
+
+    <div class="cuisine-panels">
+      <div class="cuisine-panel active" id="panel-live-counters">
+        <div class="cuisine-grid">
+          <div class="cuisine-card">
+            <span class="cuisine-emoji">🫕</span>
+            <h4>Rajasthani Laal Maas</h4>
+            <p>Fiery slow-cooked lamb in rich red chilli gravy, served with bajra roti</p>
+          </div>
+          <div class="cuisine-card">
+            <span class="cuisine-emoji">🍛</span>
+            <h4>Dal Banjara</h4>
+            <p>Smoked lentils simmered overnight, finished with white butter & cream</p>
+          </div>
+          <div class="cuisine-card">
+            <span class="cuisine-emoji">🥘</span>
+            <h4>Lucknowi Biryani</h4>
+            <p>Dum-cooked aromatic rice with saffron, whole spices & tender meat</p>
+          </div>
+          <div class="cuisine-card">
+            <span class="cuisine-emoji">🧈</span>
+            <h4>Live Chaat Counter</h4>
+            <p>Pani puri, dahi bhalla, aloo tikki — crispy, tangy street food perfection</p>
           </div>
         </div>
       </div>
-
-      <!-- Venue Information Pinned Card -->
-      <div class="venue-info" data-aos>
-        <p class="section-eyebrow">Where to find us</p>
-        <h2 class="section-title">Glasshouse Garden</h2>
-        <p class="venue-address">
-          <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>
-          42 Blossom Lane, Bandra, Mumbai 400050
-        </p>
-        <div class="venue-map">
-          <iframe title="Venue Map" src="https://maps.google.com/maps?q=Bandra+Mumbai&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        
-        <!-- Pinned details info boxes -->
-        <div class="venue-details-grid">
-          <div class="venue-detail-box">
-            <span class="detail-icon">👔</span>
-            <div class="detail-text">
-              <strong>Dress Code</strong>
-              <span>Royal Black Tie & Dark Elegance</span>
-            </div>
+      <div class="cuisine-panel" id="panel-mithai-bar">
+        <div class="cuisine-grid">
+          <div class="cuisine-card">
+            <span class="cuisine-emoji">🟡</span>
+            <h4>Kesar Rasmalai</h4>
+            <p>Saffron-infused cottage cheese dumplings in chilled sweetened milk</p>
           </div>
-          <div class="venue-detail-box">
-            <span class="detail-icon">🚗</span>
-            <div class="detail-text">
-              <strong>Parking & Valet</strong>
-              <span>Valet parking available at the main gate</span>
-            </div>
+          <div class="cuisine-card">
+            <span class="cuisine-emoji">🟤</span>
+            <h4>Gulab Jamun Live</h4>
+            <p>Golden-fried khoya balls, soaked to order in rose-cardamom syrup</p>
+          </div>
+          <div class="cuisine-card">
+            <span class="cuisine-emoji">🟢</span>
+            <h4>Paan Mousse</h4>
+            <p>A contemporary twist — betel leaf mousse with gulkand pearls</p>
+          </div>
+          <div class="cuisine-card">
+            <span class="cuisine-emoji">🔶</span>
+            <h4>Motichoor Parfait</h4>
+            <p>Layered motichoor ladoo crumble with rabri cream & pistachio dust</p>
           </div>
         </div>
-
-        <a href="https://maps.google.com/?q=Bandra+Mumbai" target="_blank" class="venue-directions-btn">
-          Get Directions →
-        </a>
+      </div>
+      <div class="cuisine-panel" id="panel-mocktails">
+        <div class="cuisine-grid">
+          <div class="cuisine-card">
+            <span class="cuisine-emoji">🥭</span>
+            <h4>Aam Panna Spritzer</h4>
+            <p>Raw mango, cumin & mint soda — served over crushed ice</p>
+          </div>
+          <div class="cuisine-card">
+            <span class="cuisine-emoji">🌹</span>
+            <h4>Rose Jaljeera Fizz</h4>
+            <p>Sparkling jaljeera with rose water, tamarind & a salt rim</p>
+          </div>
+          <div class="cuisine-card">
+            <span class="cuisine-emoji">🍊</span>
+            <h4>Saffron Thandai</h4>
+            <p>Chilled almond-saffron milk with cardamom, fennel & rose petals</p>
+          </div>
+          <div class="cuisine-card">
+            <span class="cuisine-emoji">🫖</span>
+            <h4>Masala Chai Espresso</h4>
+            <p>Spiced chai concentrate with a shot of espresso — served hot or iced</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ─── GALLERY ───────────────────────────────────────────────── -->
-  <section class="gallery-section" id="gallery">
-    <div class="section-header">
-      <p class="section-eyebrow">Our moments</p>
-      <h2 class="section-title">Gallery</h2>
-      <p class="section-subtitle">A curated collection of love, elegance and celebration</p>
-    </div>
-    <div class="masonry-grid">
-      <div class="masonry-item tall" data-aos>
-        <img src="https://images.unsplash.com/photo-1511285560929-80b456503681?w=900&q=80&fit=crop" alt="Couple portrait" />
-        <div class="masonry-overlay"><span>Our Story</span></div>
-      </div>
-      <div class="masonry-item" data-aos>
-        <img src="https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=900&q=80&fit=crop" alt="Bridal bouquet" />
-        <div class="masonry-overlay"><span>The Florals</span></div>
-      </div>
-      <div class="masonry-item" data-aos>
-        <img src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?w=900&q=80&fit=crop" alt="Engagement ring" />
-        <div class="masonry-overlay"><span>The Ring</span></div>
-      </div>
-      <div class="masonry-item tall" data-aos>
-        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80&fit=crop" alt="Table setting" />
-        <div class="masonry-overlay"><span>The Details</span></div>
-      </div>
-      <div class="masonry-item" data-aos>
-        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=900&q=80&fit=crop" alt="The Venue" />
-        <div class="masonry-overlay"><span>The Venue</span></div>
-      </div>
-      <div class="masonry-item" data-aos>
-        <img src="https://images.unsplash.com/photo-1550005809-91ad75fb315f?w=900&q=80&fit=crop" alt="Mood" />
-        <div class="masonry-overlay"><span>Mood Board</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── RSVP + REGISTRY ──────────────────────────────────────── -->
+  <!-- ═══════ RSVP & SHAGUN ═══════ -->
   <section class="rsvp-section" id="rsvp">
-    <div class="rsvp-inner">
-      <div class="rsvp-form-wrap" data-aos>
-        <p class="section-eyebrow">Are you coming?</p>
-        <h2 class="section-title">RSVP</h2>
-        <p class="rsvp-note">Please respond by <strong>1 August 2026</strong></p>
-        <form id="rsvp-form" class="rsvp-form" novalidate>
+    <div class="section-intro">
+      <span class="section-tag">We'd love to see you</span>
+      <h2 class="section-heading">RSVP & Digital Shagun</h2>
+      <p class="section-sub">Let us know you're coming and select which celebrations you'll grace with your presence.</p>
+    </div>
+
+    <div class="rsvp-container">
+      <!-- Progress Steps -->
+      <div class="rsvp-progress">
+        <div class="rsvp-step active" data-step="1"><span>1</span> Your Details</div>
+        <div class="rsvp-step" data-step="2"><span>2</span> Select Events</div>
+        <div class="rsvp-step" data-step="3"><span>3</span> Diet & Shagun</div>
+      </div>
+
+      <form id="rsvpForm" novalidate>
+        <!-- Step 1: Details -->
+        <div class="form-step active" id="step1">
+          <h3 class="step-title">Your Details</h3>
           <div class="form-row">
             <div class="form-group">
-              <label for="f-name">Full Name</label>
-              <input type="text" id="f-name" name="name" placeholder="Your full name" required />
+              <label for="rsvp-name">Full Name</label>
+              <input type="text" id="rsvp-name" placeholder="Your full name" required />
             </div>
             <div class="form-group">
-              <label for="f-email">Email</label>
-              <input type="email" id="f-email" name="email" placeholder="your@email.com" required />
+              <label for="rsvp-email">Email</label>
+              <input type="email" id="rsvp-email" placeholder="your@email.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="rsvp-phone">Phone</label>
+              <input type="tel" id="rsvp-phone" placeholder="+91 98765 43210" />
+            </div>
+            <div class="form-group">
+              <label for="rsvp-guests">Number of Guests</label>
+              <select id="rsvp-guests">
+                <option value="1">Just me</option>
+                <option value="2">2 guests</option>
+                <option value="3">3 guests</option>
+                <option value="4">4 guests</option>
+                <option value="5">5+ guests</option>
+              </select>
             </div>
           </div>
           <div class="form-group">
-            <label for="f-guests">Number of Guests</label>
-            <select id="f-guests" name="guests" required>
-              <option value="">Select guests</option>
-              <option value="1">Just me</option>
-              <option value="2">2 guests</option>
-              <option value="3">3 guests</option>
-              <option value="4">4 guests</option>
+            <label>Will you attend?</label>
+            <div class="radio-row">
+              <label class="radio-card"><input type="radio" name="attending" value="yes" required /><span>Joyfully Accepts 🎉</span></label>
+              <label class="radio-card"><input type="radio" name="attending" value="no" /><span>Regretfully Declines</span></label>
+            </div>
+          </div>
+          <button type="button" class="form-next-btn" data-next="2">Continue →</button>
+        </div>
+
+        <!-- Step 2: Event Selection -->
+        <div class="form-step" id="step2">
+          <h3 class="step-title">Which Events Will You Attend?</h3>
+          <div class="event-check-grid">
+            <label class="event-check-card">
+              <input type="checkbox" name="events" value="haldi" />
+              <div class="ecc-inner">
+                <span class="ecc-emoji">☀️</span>
+                <strong>Haldi & Mehendi</strong>
+                <span>Dec 18 · 11 AM</span>
+              </div>
+            </label>
+            <label class="event-check-card">
+              <input type="checkbox" name="events" value="sangeet" />
+              <div class="ecc-inner">
+                <span class="ecc-emoji">🌙</span>
+                <strong>Sangeet Night</strong>
+                <span>Dec 19 · 7 PM</span>
+              </div>
+            </label>
+            <label class="event-check-card">
+              <input type="checkbox" name="events" value="vivah" />
+              <div class="ecc-inner">
+                <span class="ecc-emoji">🙏</span>
+                <strong>Vivah Sanskar</strong>
+                <span>Dec 20 · 9 AM</span>
+              </div>
+            </label>
+            <label class="event-check-card">
+              <input type="checkbox" name="events" value="reception" />
+              <div class="ecc-inner">
+                <span class="ecc-emoji">🥂</span>
+                <strong>Royal Reception</strong>
+                <span>Dec 20 · 7 PM</span>
+              </div>
+            </label>
+          </div>
+          <div class="form-nav-row">
+            <button type="button" class="form-back-btn" data-prev="1">← Back</button>
+            <button type="button" class="form-next-btn" data-next="3">Continue →</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Diet & Shagun -->
+        <div class="form-step" id="step3">
+          <h3 class="step-title">Dietary Preferences & Shagun</h3>
+          <div class="form-group">
+            <label for="rsvp-diet">Dietary Preference</label>
+            <select id="rsvp-diet">
+              <option value="">Select preference</option>
+              <option value="veg">Vegetarian</option>
+              <option value="vegan">Vegan</option>
+              <option value="nonveg">Non-Vegetarian</option>
+              <option value="jain">Jain</option>
+              <option value="gluten-free">Gluten Free</option>
             </select>
           </div>
-          <div class="form-group attending-group">
-            <label>Will you attend?</label>
-            <div class="radio-group">
-              <label class="radio-pill">
-                <input type="radio" name="attending" value="yes" required />
-                <span>Joyfully accepts 🎉</span>
-              </label>
-              <label class="radio-pill">
-                <input type="radio" name="attending" value="no" />
-                <span>Regretfully declines</span>
-              </label>
+          <div class="form-group">
+            <label for="rsvp-message">A Message for the Couple</label>
+            <textarea id="rsvp-message" rows="3" placeholder="Warm wishes, song requests for sangeet..."></textarea>
+          </div>
+
+          <!-- Digital Shagun -->
+          <div class="shagun-section">
+            <h4>💝 Digital Shagun (Optional)</h4>
+            <p class="shagun-note">Your presence is our greatest blessing. If you wish to send your love digitally:</p>
+            <div class="shagun-options">
+              <a href="#" class="shagun-card">
+                <span>🏦</span>
+                <div><strong>Bank Transfer</strong><small>Direct blessing</small></div>
+              </a>
+              <a href="#" class="shagun-card">
+                <span>🎁</span>
+                <div><strong>Gift Registry</strong><small>Curated wishlist</small></div>
+              </a>
+              <a href="#" class="shagun-card">
+                <span>✈️</span>
+                <div><strong>Honeymoon Fund</strong><small>Help us travel</small></div>
+              </a>
             </div>
           </div>
-          <div class="form-group">
-            <label for="f-message">Leave a message</label>
-            <textarea id="f-message" name="message" rows="3" placeholder="Warm wishes, song requests..."></textarea>
+
+          <div class="form-nav-row">
+            <button type="button" class="form-back-btn" data-prev="2">← Back</button>
+            <button type="submit" class="form-submit-btn" id="rsvpSubmit">Send RSVP with Love 💌</button>
           </div>
-          <button type="submit" class="submit-btn" id="rsvp-submit">
-            Send RSVP
-            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/></svg>
-          </button>
-          <p class="form-success" id="form-success" hidden>👑 Thank you! We can't wait to celebrate with you.</p>
-        </form>
-      </div>
-      <div class="registry-wrap" data-aos>
-        <p class="section-eyebrow">Gift Registry</p>
-        <h2 class="section-title">Our Wishlist</h2>
-        <p class="registry-note">Your presence is our greatest treasure. If you wish to honour us further, we have curated a few options:</p>
-        <div class="registry-cards">
-          <a href="#" class="registry-card">
-            <span class="registry-icon">🛍️</span>
-            <div><strong>Amazon Registry</strong><span>View our curated wishlist</span></div>
-            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor"/></svg>
-          </a>
-          <a href="#" class="registry-card">
-            <span class="registry-icon">💝</span>
-            <div><strong>Zola Registry</strong><span>Experiences & memories</span></div>
-            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor"/></svg>
-          </a>
-          <a href="#" class="registry-card">
-            <span class="registry-icon">✈️</span>
-            <div><strong>Honeymoon Fund</strong><span>Help us make memories</span></div>
-            <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor"/></svg>
-          </a>
         </div>
+      </form>
+
+      <!-- Success message -->
+      <div class="rsvp-success" id="rsvpSuccess" hidden>
+        <span class="success-icon">🎊</span>
+        <h3>Thank You!</h3>
+        <p>We can't wait to celebrate with you. Your RSVP has been received.</p>
       </div>
     </div>
   </section>
 
-  <!-- ─── FOOTER ─────────────────────────────────────────────────── -->
+  <!-- ═══════ FOOTER ═══════ -->
   <footer class="footer">
-    <p class="footer-names">Emma &amp; Liam</p>
-    <p class="footer-date">12 · 09 · 2026</p>
-    <p class="footer-note">Made with love ♡</p>
+    <div class="footer-monogram">R <span>&</span> S</div>
+    <p class="footer-date">18 · 19 · 20 December 2026</p>
+    <p class="footer-tagline">Made with love & chai ♡</p>
   </footer>
+
+  <!-- ═══════ MODALS ═══════ -->
+  <div class="modal-overlay" id="modalOverlay">
+    <!-- Haldi Modal -->
+    <div class="modal" id="modal-haldi">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <div class="modal-header haldi-gradient">
+        <span class="modal-tag">Haldi & Mehendi</span>
+        <h3>Dress Code & Mood Board</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-info"><strong>👗 Dress Code:</strong> Bright yellows, marigold oranges, and sunny florals. Think playful and vibrant!</div>
+        <div class="modal-info"><strong>🕐 Timing:</strong> December 18, 2026 · 11:00 AM – 5:00 PM</div>
+        <div class="modal-info"><strong>📍 Venue:</strong> The Garden Pavilion, Oberoi Udaivilas, Udaipur</div>
+        <div class="modal-info"><strong>💡 Tip:</strong> Wear clothes you don't mind getting stained! The haldi will fly ✨</div>
+      </div>
+    </div>
+    <!-- Sangeet Modal -->
+    <div class="modal" id="modal-sangeet">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <div class="modal-header sangeet-gradient">
+        <span class="modal-tag">Sangeet Night</span>
+        <h3>Dress Code & Mood Board</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-info"><strong>👗 Dress Code:</strong> Glamorous cocktail attire — rich jewel tones, sequins, and statement pieces.</div>
+        <div class="modal-info"><strong>🕐 Timing:</strong> December 19, 2026 · 7:00 PM – Midnight</div>
+        <div class="modal-info"><strong>📍 Venue:</strong> The Lakeside Amphitheatre</div>
+        <div class="modal-info"><strong>🎶 Highlight:</strong> Team Bride vs. Team Groom Dance-Off at 9:30 PM!</div>
+      </div>
+    </div>
+    <!-- Vivah Modal -->
+    <div class="modal" id="modal-vivah">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <div class="modal-header vivah-gradient">
+        <span class="modal-tag">The Vivah Sanskar</span>
+        <h3>Dress Code & Mood Board</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-info"><strong>👗 Dress Code:</strong> Royal traditional — heavy silks, brocades, rich reds, golds, and regal greens.</div>
+        <div class="modal-info"><strong>🕐 Timing:</strong> December 20, 2026 · 9:00 AM – 2:00 PM</div>
+        <div class="modal-info"><strong>📍 Venue:</strong> The Royal Mandap, Palace Grounds</div>
+        <div class="modal-info"><strong>🙏 Note:</strong> The sacred ceremonies begin sharp at 9:30 AM. Please be seated by 9:15 AM.</div>
+      </div>
+    </div>
+    <!-- Reception Modal -->
+    <div class="modal" id="modal-reception">
+      <button class="modal-close" aria-label="Close">&times;</button>
+      <div class="modal-header reception-gradient">
+        <span class="modal-tag">The Royal Reception</span>
+        <h3>Dress Code & Mood Board</h3>
+      </div>
+      <div class="modal-body">
+        <div class="modal-info"><strong>👗 Dress Code:</strong> Black-tie elegance — tuxedos, floor-length gowns, sophisticated Indian formals.</div>
+        <div class="modal-info"><strong>🕐 Timing:</strong> December 20, 2026 · 7:00 PM – Late</div>
+        <div class="modal-info"><strong>📍 Venue:</strong> The Grand Ballroom, City Palace</div>
+        <div class="modal-info"><strong>🥂 Highlight:</strong> Grand couple entrance at 8:00 PM, followed by the first dance.</div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
