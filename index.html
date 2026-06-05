@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Emma &amp; Liam — 12 September 2026</title>
-  <meta name="description" content="Join Emma & Liam on their wedding day — 12 September 2026. RSVP, venue, schedule and gallery." />
+  <meta name="description" content="Join Emma & Liam on their royal wedding day — 12 September 2026. RSVP, schedule, venue and gallery." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -12,10 +12,11 @@
 </head>
 <body>
 
-  <!-- ─── NAV ─────────────────────────────────────────────────── -->
+  <!-- ─── NAV ──────────────────────────────────────────────────── -->
   <nav class="nav" id="nav">
     <a href="#" class="nav-logo">E & L</a>
     <ul class="nav-links">
+      <li><a href="#functions">Functions</a></li>
       <li><a href="#schedule">Schedule</a></li>
       <li><a href="#venue">Venue</a></li>
       <li><a href="#gallery">Gallery</a></li>
@@ -29,35 +30,43 @@
   <!-- ─── HERO ─────────────────────────────────────────────────── -->
   <section class="hero" id="story">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1800&q=80&fit=crop" alt="Emma and Liam" class="hero-img" />
+      <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1800&q=85&fit=crop" alt="Royal Wedding" class="hero-img" />
       <div class="hero-overlay"></div>
     </div>
+    <!-- Corner ornaments -->
+    <div class="hero-ornament tl"></div>
+    <div class="hero-ornament tr"></div>
+    <div class="hero-ornament bl"></div>
+    <div class="hero-ornament br"></div>
+
     <div class="hero-content">
-      <p class="hero-eyebrow">We're getting married</p>
+      <span class="hero-crown">👑</span>
+      <p class="hero-eyebrow">A Royal Celebration</p>
       <h1 class="hero-names">Emma <span class="amp">&</span> Liam</h1>
       <p class="hero-date">
         <span class="date-day">Saturday</span>
-        12 September 2026
+        12 · September · 2026
       </p>
       <div class="hero-divider">
         <span class="line"></span>
-        <svg class="leaf" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+        <span class="hero-diamond"></span>
         <span class="line"></span>
       </div>
       <a href="#rsvp" class="hero-btn">
-        Kindly RSVP
-        <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor"/></svg>
+        <span>Kindly RSVP</span>
+        <svg viewBox="0 0 24 24" width="14" height="14"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor"/></svg>
       </a>
     </div>
-    <a href="#schedule" class="hero-scroll" aria-label="scroll down">
-      <svg viewBox="0 0 24 24" width="20" height="20"><path d="M12 16l-6-6 1.41-1.41L12 13.17l4.59-4.58L18 10z" fill="currentColor"/></svg>
+    <a href="#countdown" class="hero-scroll" aria-label="scroll">
+      <svg viewBox="0 0 24 24" width="18" height="18"><path d="M12 16l-6-6 1.41-1.41L12 13.17l4.59-4.58L18 10z" fill="currentColor"/></svg>
+      scroll
     </a>
   </section>
 
   <!-- ─── COUNTDOWN ─────────────────────────────────────────────── -->
-  <section class="countdown-section">
+  <section class="countdown-section" id="countdown">
     <p class="countdown-label">Until we say "I do"</p>
-    <div class="countdown" id="countdown">
+    <div class="countdown" id="countdown-timer">
       <div class="count-item"><span id="cd-days">--</span><label>Days</label></div>
       <div class="count-sep">:</div>
       <div class="count-item"><span id="cd-hours">--</span><label>Hours</label></div>
@@ -68,7 +77,128 @@
     </div>
   </section>
 
-  <!-- ─── SCHEDULE ─────────────────────────────────────────────── -->
+  <!-- ─── FUNCTION SLIDER ───────────────────────────────────────── -->
+  <section class="functions-section" id="functions">
+    <div class="section-header">
+      <p class="section-eyebrow">The Royal Events</p>
+      <h2 class="section-title">Wedding Functions</h2>
+      <p class="section-subtitle">A celebration curated across four magical moments</p>
+    </div>
+
+    <div class="slider-wrapper" id="slider">
+      <div class="slider-track" id="sliderTrack">
+
+        <!-- Slide 1: Ceremony -->
+        <div class="slide active" data-slide="0">
+          <div class="slide-bg">
+            <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1600&q=80&fit=crop" alt="Ceremony" />
+          </div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-inner">
+              <span class="slide-number">01</span>
+              <div class="slide-time">4:00 PM · Garden Pavilion</div>
+              <h3 class="slide-title">The Ceremony</h3>
+              <p class="slide-desc">Beneath a canopy of ivory roses and soft candlelight, we exchange our vows in the presence of the people we love most.</p>
+              <span class="slide-badge">💍 Sacred Vows</span>
+            </div>
+          </div>
+          <div class="slide-progress" id="slideProgress">
+            <div class="slide-prog-dot active" data-idx="0"></div>
+            <div class="slide-prog-dot" data-idx="1"></div>
+            <div class="slide-prog-dot" data-idx="2"></div>
+            <div class="slide-prog-dot" data-idx="3"></div>
+          </div>
+        </div>
+
+        <!-- Slide 2: Cocktails -->
+        <div class="slide" data-slide="1">
+          <div class="slide-bg">
+            <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=1600&q=80&fit=crop" alt="Cocktail Hour" />
+          </div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-inner">
+              <span class="slide-number">02</span>
+              <div class="slide-time">5:15 PM · The Terrace</div>
+              <h3 class="slide-title">Cocktail Hour</h3>
+              <p class="slide-desc">Signature cocktails, artisan canapés and the golden glow of dusk. Mingle, laugh, and capture memories on the terrace.</p>
+              <span class="slide-badge">🥂 Toast & Celebrate</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3: Dinner -->
+        <div class="slide" data-slide="2">
+          <div class="slide-bg">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=80&fit=crop" alt="Royal Dinner" />
+          </div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-inner">
+              <span class="slide-number">03</span>
+              <div class="slide-time">6:30 PM · Grand Ballroom</div>
+              <h3 class="slide-title">Royal Dinner</h3>
+              <p class="slide-desc">A sumptuous farm-to-table feast served beneath crystal chandeliers. Five courses of seasonal cuisine, paired with the finest wines.</p>
+              <span class="slide-badge">🍽️ Fine Dining</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4: Dancing -->
+        <div class="slide" data-slide="3">
+          <div class="slide-bg">
+            <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=1600&q=80&fit=crop" alt="Dancing" />
+          </div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <div class="slide-inner">
+              <span class="slide-number">04</span>
+              <div class="slide-time">8:00 PM · Dance Floor</div>
+              <h3 class="slide-title">First Dance</h3>
+              <p class="slide-desc">The night comes alive. Our first dance, cake cutting, and then the floor is yours — dance until the stars fade.</p>
+              <span class="slide-badge">🎶 Music & Dancing</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /slider-track -->
+    </div><!-- /slider-wrapper -->
+
+    <!-- Thumbnails -->
+    <div class="slider-thumbs" id="sliderThumbs">
+      <div class="slider-thumb active" data-thumb="0">
+        <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=200&q=70&fit=crop" alt="Ceremony" />
+      </div>
+      <div class="slider-thumb" data-thumb="1">
+        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?w=200&q=70&fit=crop" alt="Cocktails" />
+      </div>
+      <div class="slider-thumb" data-thumb="2">
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=200&q=70&fit=crop" alt="Dinner" />
+      </div>
+      <div class="slider-thumb" data-thumb="3">
+        <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=200&q=70&fit=crop" alt="Dancing" />
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="slider-controls">
+      <button class="slider-btn" id="sliderPrev" aria-label="Previous">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" fill="currentColor"/></svg>
+      </button>
+      <div class="slider-dots" id="sliderDots">
+        <div class="slider-dot active" data-dot="0"></div>
+        <div class="slider-dot" data-dot="1"></div>
+        <div class="slider-dot" data-dot="2"></div>
+        <div class="slider-dot" data-dot="3"></div>
+      </div>
+      <button class="slider-btn" id="sliderNext" aria-label="Next">
+        <svg viewBox="0 0 24 24" width="18" height="18"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- ─── SCHEDULE ───────────────────────────────────────────────── -->
   <section class="schedule" id="schedule">
     <div class="section-header">
       <p class="section-eyebrow">Plan your day</p>
@@ -80,7 +210,7 @@
         <div class="timeline-card">
           <span class="tl-time">4:00 PM</span>
           <h3>Ceremony</h3>
-          <p>Garden Pavilion — Join us as we exchange vows beneath the canopy of roses.</p>
+          <p>Garden Pavilion — Exchange of vows beneath the canopy of ivory roses.</p>
         </div>
       </div>
       <div class="timeline-item" data-aos>
@@ -88,23 +218,23 @@
         <div class="timeline-card">
           <span class="tl-time">5:15 PM</span>
           <h3>Cocktail Hour</h3>
-          <p>The Terrace — Signature drinks, canapés and golden-hour photos.</p>
+          <p>The Terrace — Signature drinks, canapés and golden-hour portraits.</p>
         </div>
       </div>
       <div class="timeline-item" data-aos>
         <div class="timeline-icon">🍽️</div>
         <div class="timeline-card">
           <span class="tl-time">6:30 PM</span>
-          <h3>Dinner</h3>
-          <p>Grand Ballroom — A curated farm-to-table feast with loved ones.</p>
+          <h3>Royal Dinner</h3>
+          <p>Grand Ballroom — A five-course farm-to-table feast beneath crystal chandeliers.</p>
         </div>
       </div>
       <div class="timeline-item" data-aos>
         <div class="timeline-icon">🎶</div>
         <div class="timeline-card">
           <span class="tl-time">8:00 PM</span>
-          <h3>Dancing</h3>
-          <p>Dance Floor — First dance, cake cutting and celebration into the night.</p>
+          <h3>First Dance & Celebration</h3>
+          <p>Dance Floor — First dance, cake cutting, and celebration into the night.</p>
         </div>
       </div>
     </div>
@@ -125,15 +255,9 @@
           42 Blossom Lane, Bandra, Mumbai 400050
         </p>
         <div class="venue-map">
-          <iframe
-            title="Venue Map"
-            src="https://maps.google.com/maps?q=42+Blossom+Lane+Bandra+Mumbai&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            allowfullscreen
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
+          <iframe title="Venue Map" src="https://maps.google.com/maps?q=Bandra+Mumbai&t=&z=14&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-        <a href="https://maps.google.com/?q=42+Blossom+Lane+Bandra+Mumbai" target="_blank" class="venue-directions-btn">
+        <a href="https://maps.google.com/?q=Bandra+Mumbai" target="_blank" class="venue-directions-btn">
           Get Directions →
         </a>
       </div>
@@ -145,6 +269,7 @@
     <div class="section-header">
       <p class="section-eyebrow">Our moments</p>
       <h2 class="section-title">Gallery</h2>
+      <p class="section-subtitle">A curated collection of love, elegance and celebration</p>
     </div>
     <div class="masonry-grid">
       <div class="masonry-item tall" data-aos>
@@ -223,37 +348,27 @@
             Send RSVP
             <svg viewBox="0 0 24 24" width="16" height="16"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/></svg>
           </button>
-          <p class="form-success" id="form-success" hidden>🌸 Thank you! We can't wait to celebrate with you.</p>
+          <p class="form-success" id="form-success" hidden>👑 Thank you! We can't wait to celebrate with you.</p>
         </form>
       </div>
-
       <div class="registry-wrap" data-aos>
         <p class="section-eyebrow">Gift Registry</p>
         <h2 class="section-title">Our Wishlist</h2>
-        <p class="registry-note">Your presence is our greatest gift. If you'd like to honour us further:</p>
+        <p class="registry-note">Your presence is our greatest treasure. If you wish to honour us further, we have curated a few options:</p>
         <div class="registry-cards">
           <a href="#" class="registry-card">
             <span class="registry-icon">🛍️</span>
-            <div>
-              <strong>Amazon Registry</strong>
-              <span>View our curated list</span>
-            </div>
+            <div><strong>Amazon Registry</strong><span>View our curated wishlist</span></div>
             <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor"/></svg>
           </a>
           <a href="#" class="registry-card">
             <span class="registry-icon">💝</span>
-            <div>
-              <strong>Zola Registry</strong>
-              <span>Experiences & memories</span>
-            </div>
+            <div><strong>Zola Registry</strong><span>Experiences & memories</span></div>
             <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor"/></svg>
           </a>
           <a href="#" class="registry-card">
             <span class="registry-icon">✈️</span>
-            <div>
-              <strong>Honeymoon Fund</strong>
-              <span>Help us make memories</span>
-            </div>
+            <div><strong>Honeymoon Fund</strong><span>Help us make memories</span></div>
             <svg viewBox="0 0 24 24" width="16" height="16"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" fill="currentColor"/></svg>
           </a>
         </div>
@@ -261,7 +376,7 @@
     </div>
   </section>
 
-  <!-- ─── FOOTER ────────────────────────────────────────────────── -->
+  <!-- ─── FOOTER ─────────────────────────────────────────────────── -->
   <footer class="footer">
     <p class="footer-names">Emma &amp; Liam</p>
     <p class="footer-date">12 · 09 · 2026</p>
