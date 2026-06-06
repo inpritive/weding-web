@@ -2,11 +2,26 @@
    RONEET & SUHANA — Interactive JavaScript
    ═══════════════════════════════════════════════════════════════ */
 
+/* ─── THEME SWITCHER ─────────────────────────────────────────── */
+const themeToggle = document.getElementById('themeToggle');
+const savedTheme = localStorage.getItem('theme');
+
+// Apply light theme if saved, else default is dark
+if (savedTheme === 'light') {
+  document.body.classList.add('light-theme');
+}
+
+themeToggle.addEventListener('click', () => {
+  const isLight = document.body.classList.toggle('light-theme');
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
+
 /* ─── NAV SCROLL ─────────────────────────────────────────────── */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 60);
 });
+
 
 /* ─── MOBILE MENU ────────────────────────────────────────────── */
 const navToggle = document.getElementById('navToggle');
@@ -93,6 +108,45 @@ document.querySelectorAll('.modal-close').forEach(btn => {
 });
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeAllModals();
+});
+
+/* ─── MODAL CAROUSELS ────────────────────────────────────────── */
+document.querySelectorAll('.modal-carousel').forEach(carousel => {
+  const track = carousel.querySelector('.carousel-track');
+  const slides = carousel.querySelectorAll('.carousel-slide');
+  const prevBtn = carousel.querySelector('.carousel-btn-prev');
+  const nextBtn = carousel.querySelector('.carousel-btn-next');
+  const dots = carousel.querySelectorAll('.carousel-dot');
+  
+  let activeIndex = 0;
+  const totalSlides = slides.length;
+  
+  function updateCarousel() {
+    track.style.transform = `translateX(-${activeIndex * 100}%)`;
+    dots.forEach((dot, idx) => {
+      dot.classList.toggle('active', idx === activeIndex);
+    });
+  }
+  
+  prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    activeIndex = (activeIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  });
+  
+  nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    activeIndex = (activeIndex + 1) % totalSlides;
+    updateCarousel();
+  });
+  
+  dots.forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation();
+      activeIndex = parseInt(dot.dataset.index);
+      updateCarousel();
+    });
+  });
 });
 
 /* ─── JOOTA CHUPAI GAME ─────────────────────────────────────── */

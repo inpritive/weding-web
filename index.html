@@ -22,15 +22,21 @@
       <li><a href="#mahabhoj">Cuisine</a></li>
       <li><a href="#rsvp" class="nav-cta">RSVP</a></li>
     </ul>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-actions">
+      <button class="theme-toggle-btn" id="themeToggle" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M12.3 22h-.1c-5.5 0-10-4.5-10-10 0-4.8 3.5-8.9 8.2-9.8.5-.1 1 .2 1.1.7.2.5-.1 1.1-.6 1.3-3.6 1.4-6 5-6 9 0 4.4 3.6 8 8 8 3.7 0 7-2.5 8.1-6 .2-.5.7-.8 1.2-.6.5.2.8.7.6 1.2-1.7 4.5-6 7.2-10.5 7.2z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" style="display:none;"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 00-1.41 0 .996.996 0 000 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 000-1.41l-1.06-1.06zm1.06-10.96a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.01a.996.996 0 000-1.41.996.996 0 00-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z"/></svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 
   <!-- ═══════ HERO ═══════ -->
   <section class="hero" id="hero">
     <div class="hero-bg">
-      <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1800&q=85&fit=crop" alt="Wedding couple" class="hero-img" />
+      <img src="https://i.pinimg.com/1200x/ec/37/c4/ec37c4ad698a68ba381ba1cc4a5d289a.jpg" alt="Wedding couple" class="hero-img" />
       <div class="hero-overlay"></div>
     </div>
 
@@ -94,7 +100,7 @@
         </div>
         <div class="stop-card haldi-card">
           <div class="stop-img">
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80&fit=crop" alt="Haldi ceremony with marigold flowers" />
+            <img src="https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=800&q=80&fit=crop" alt="Haldi ceremony with marigold flowers" />
             <div class="stop-date-badge">Dec 18, 2026</div>
           </div>
           <div class="stop-info">
@@ -118,7 +124,7 @@
         </div>
         <div class="stop-card sangeet-card">
           <div class="stop-img">
-            <img src="https://images.unsplash.com/photo-1504196606672-aef5c9cefc92?w=800&q=80&fit=crop" alt="Sangeet night dance floor with lights" />
+            <img src="https://i.pinimg.com/736x/83/c9/bf/83c9bf1b2b9bd012656f78eba9b41a0a.jpg" alt="Sangeet night dance floor with lights" />
             <div class="stop-date-badge">Dec 19, 2026</div>
           </div>
           <div class="stop-info">
@@ -148,7 +154,7 @@
         </div>
         <div class="stop-card vivah-card">
           <div class="stop-img">
-            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=800&q=80&fit=crop" alt="Sacred mandap wedding ceremony" />
+            <img src="https://i.pinimg.com/736x/3c/ab/7d/3cab7d12646ff6b70ec92a4d03c536f8.jpg" alt="Sacred mandap wedding ceremony at night" />
             <div class="stop-date-badge">Dec 20, 2026</div>
           </div>
           <div class="stop-info">
@@ -601,6 +607,29 @@
         <h3>Dress Code & Mood Board</h3>
       </div>
       <div class="modal-body">
+        <div class="modal-carousel" data-carousel="haldi">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1595878714553-b37802798f1a?w=600&q=80&fit=crop" alt="Bright Yellow outfits" />
+              <div class="carousel-caption">Vibrant yellow lehengas & kurta styles</div>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1522413452208-996ff3f3e740?w=600&q=80&fit=crop" alt="Marigold decor" />
+              <div class="carousel-caption">Traditional marigold & orange floral decor</div>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80&fit=crop" alt="Playful ceremony" />
+              <div class="carousel-caption">Sun-drenched playful celebrations</div>
+            </div>
+          </div>
+          <button class="carousel-btn carousel-btn-prev" aria-label="Previous Slide">&lt;</button>
+          <button class="carousel-btn carousel-btn-next" aria-label="Next Slide">&gt;</button>
+          <div class="carousel-dots">
+            <span class="carousel-dot active" data-index="0"></span>
+            <span class="carousel-dot" data-index="1"></span>
+            <span class="carousel-dot" data-index="2"></span>
+          </div>
+        </div>
         <div class="modal-info"><strong>👗 Dress Code:</strong> Bright yellows, marigold oranges, and sunny florals. Think playful and vibrant!</div>
         <div class="modal-info"><strong>🕐 Timing:</strong> December 18, 2026 · 11:00 AM – 5:00 PM</div>
         <div class="modal-info"><strong>📍 Venue:</strong> The Garden Pavilion, Oberoi Udaivilas, Udaipur</div>
@@ -615,6 +644,29 @@
         <h3>Dress Code & Mood Board</h3>
       </div>
       <div class="modal-body">
+        <div class="modal-carousel" data-carousel="sangeet">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=600&q=80&fit=crop" alt="Glamorous sequins & jewel tones" />
+              <div class="carousel-caption">Glamorous sequins & deep jewel tones</div>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=600&q=80&fit=crop" alt="Twinkling lights & stage" />
+              <div class="carousel-caption">Twinkling starlit fairy lights & stage</div>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&q=80&fit=crop" alt="Dance-off beats" />
+              <div class="carousel-caption">High-energy beats & choreographies</div>
+            </div>
+          </div>
+          <button class="carousel-btn carousel-btn-prev" aria-label="Previous Slide">&lt;</button>
+          <button class="carousel-btn carousel-btn-next" aria-label="Next Slide">&gt;</button>
+          <div class="carousel-dots">
+            <span class="carousel-dot active" data-index="0"></span>
+            <span class="carousel-dot" data-index="1"></span>
+            <span class="carousel-dot" data-index="2"></span>
+          </div>
+        </div>
         <div class="modal-info"><strong>👗 Dress Code:</strong> Glamorous cocktail attire — rich jewel tones, sequins, and statement pieces.</div>
         <div class="modal-info"><strong>🕐 Timing:</strong> December 19, 2026 · 7:00 PM – Midnight</div>
         <div class="modal-info"><strong>📍 Venue:</strong> The Lakeside Amphitheatre</div>
@@ -629,6 +681,29 @@
         <h3>Dress Code & Mood Board</h3>
       </div>
       <div class="modal-body">
+        <div class="modal-carousel" data-carousel="vivah">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1610173827607-d39bd6ef9b41?w=600&q=80&fit=crop" alt="Royal red brocades" />
+              <div class="carousel-caption">Royal red brocades & heavy gold embroidery</div>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://i.pinimg.com/736x/3c/ab/7d/3cab7d12646ff6b70ec92a4d03c536f8.jpg" alt="Starlit reflecting pool & palace courtyard" />
+              <div class="carousel-caption">Starlit reflecting pool & palace courtyard (Vivah Venue)</div>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=600&q=80&fit=crop" alt="Traditional mandap" />
+              <div class="carousel-caption">Varmala & traditional mandap decor</div>
+            </div>
+          </div>
+          <button class="carousel-btn carousel-btn-prev" aria-label="Previous Slide">&lt;</button>
+          <button class="carousel-btn carousel-btn-next" aria-label="Next Slide">&gt;</button>
+          <div class="carousel-dots">
+            <span class="carousel-dot active" data-index="0"></span>
+            <span class="carousel-dot" data-index="1"></span>
+            <span class="carousel-dot" data-index="2"></span>
+          </div>
+        </div>
         <div class="modal-info"><strong>👗 Dress Code:</strong> Royal traditional — heavy silks, brocades, rich reds, golds, and regal greens.</div>
         <div class="modal-info"><strong>🕐 Timing:</strong> December 20, 2026 · 9:00 AM – 2:00 PM</div>
         <div class="modal-info"><strong>📍 Venue:</strong> The Royal Mandap, Palace Grounds</div>
@@ -643,6 +718,29 @@
         <h3>Dress Code & Mood Board</h3>
       </div>
       <div class="modal-body">
+        <div class="modal-carousel" data-carousel="reception">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1511285560929-80b456503681?w=600&q=80&fit=crop" alt="Black-tie formalwear" />
+              <div class="carousel-caption">Elegant black-tie sherwanis & gowns</div>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=600&q=80&fit=crop" alt="Grand ballroom chandelier" />
+              <div class="carousel-caption">Grand ballroom & chandelier setup</div>
+            </div>
+            <div class="carousel-slide">
+              <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=600&q=80&fit=crop" alt="Champagne & dining" />
+              <div class="carousel-caption">Champagne toasts & gourmet dining</div>
+            </div>
+          </div>
+          <button class="carousel-btn carousel-btn-prev" aria-label="Previous Slide">&lt;</button>
+          <button class="carousel-btn carousel-btn-next" aria-label="Next Slide">&gt;</button>
+          <div class="carousel-dots">
+            <span class="carousel-dot active" data-index="0"></span>
+            <span class="carousel-dot" data-index="1"></span>
+            <span class="carousel-dot" data-index="2"></span>
+          </div>
+        </div>
         <div class="modal-info"><strong>👗 Dress Code:</strong> Black-tie elegance — tuxedos, floor-length gowns, sophisticated Indian formals.</div>
         <div class="modal-info"><strong>🕐 Timing:</strong> December 20, 2026 · 7:00 PM – Late</div>
         <div class="modal-info"><strong>📍 Venue:</strong> The Grand Ballroom, City Palace</div>
